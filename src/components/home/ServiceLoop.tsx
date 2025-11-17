@@ -58,15 +58,31 @@ const ServiceLoop = () => {
       ],
       includes: "Progress reviews & recalibration.",
     },
+    {
+      number: 5,
+      title: "ESG Reporting & Disclosure",
+      shortDesc: "Reporting blueprint, CSRD alignment, integration of existing initiatives, and certification support.",
+      objective: "Build clear, compliant ESG reporting that integrates seamlessly with your existing work.",
+      deliverables: [
+        "Reporting blueprint",
+        "Full structure and scope definition",
+        "Integration of previous ESG work & active initiatives",
+        "CSRD alignment",
+        "Standards mapping (CSRD, GRI, etc.)",
+        "Certification/assurance preparation recommendations",
+      ],
+      includes: "Scope options: Light, medium, or comprehensive — depending on your needs. Methodology: Desk research + alignment with your existing ESG outputs.",
+      bestFor: "SMEs preparing for CSRD, needing a structured ESG report, or wanting to unify scattered sustainability work into a coherent disclosure.",
+    },
   ];
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold">What We Offer — The 4-Step Loop</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">What We Offer — The 5-Step Loop</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Our work follows a practical, iterative loop: you learn → assess → strategize → implement → repeat. 
+            Our work follows a practical, iterative loop: you learn → assess → strategize → implement → report → repeat. 
             Use standalone modules or the full loop.
           </p>
         </div>
@@ -105,8 +121,8 @@ const ServiceLoop = () => {
 
             {/* Cards in circular positions */}
             {services.map((service, index) => {
-              const angle = (index * 90 - 90) * (Math.PI / 180);
-              const radius = 250;
+              const angle = (index * 72 - 90) * (Math.PI / 180);
+              const radius = 280;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
 
