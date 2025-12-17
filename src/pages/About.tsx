@@ -4,38 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GraduationCap, Building2, TrendingUp, Target } from "lucide-react";
 import thomasPhoto from "@/assets/thomas-huyghe.jfif";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const About = () => {
+  const { t, language } = useLanguage();
+  
   const timeline = [
     {
       icon: GraduationCap,
-      title: "MSc Supply Chain Management",
-      organization: "University of Antwerp",
-      description: "Foundation in logistics and operations",
+      title: language === "en" ? "MSc Supply Chain Management" : "MSc Supply Chain Management",
+      organization: language === "en" ? "University of Antwerp" : "Universiteit Antwerpen",
+      description: language === "en" ? "Foundation in logistics and operations" : "Basis in logistiek en operations",
     },
     {
       icon: GraduationCap,
-      title: "MSc Global Business & Sustainability",
+      title: language === "en" ? "MSc Global Business & Sustainability" : "MSc Global Business & Sustainability",
       organization: "Rotterdam School of Management",
-      description: "Specialized in sustainable business practices",
+      description: language === "en" ? "Specialized in sustainable business practices" : "Specialisatie in duurzame bedrijfspraktijken",
     },
     {
       icon: Building2,
-      title: "ESG Consultant",
+      title: language === "en" ? "ESG Consultant" : "ESG Consultant",
       organization: "BDO",
-      description: "Co-founded sustainability department; scaled team from 2 to 13 people in 2.5 years",
+      description: language === "en" 
+        ? "Co-founded sustainability department; scaled team from 2 to 13 people in 2.5 years" 
+        : "Mede-oprichter duurzaamheidsafdeling; team gegroeid van 2 naar 13 mensen in 2,5 jaar",
     },
     {
       icon: TrendingUp,
-      title: "ESG Specialist",
+      title: language === "en" ? "ESG Specialist" : "ESG Specialist",
       organization: "Manuchar",
-      description: "Carbon footprinting, responsible sourcing programs, decarbonisation roadmap; contributed to Ecovadis Platinum achievement",
+      description: language === "en" 
+        ? "Carbon footprinting, responsible sourcing programs, decarbonisation roadmap; contributed to Ecovadis Platinum achievement" 
+        : "Carbon footprinting, responsible sourcing programma's, decarbonisatie-roadmap; bijgedragen aan het behalen van Ecovadis Platinum",
     },
     {
       icon: Target,
-      title: "Founder",
+      title: language === "en" ? "Founder" : "Oprichter",
       organization: "Sustavision",
-      description: "Helping SMEs implement pragmatic ESG solutions",
+      description: language === "en" 
+        ? "Helping SMEs implement pragmatic ESG solutions" 
+        : "KMO's helpen met pragmatische ESG-oplossingen",
     },
   ];
 
@@ -54,23 +63,14 @@ const About = () => {
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary/20 shadow-lg flex-shrink-0"
                 />
                 <div className="space-y-6">
-                  <h1 className="text-4xl md:text-5xl font-bold">Hi — I'm Thomas Huyghe. I make ESG practical.</h1>
+                  <h1 className="text-4xl md:text-5xl font-bold">{t.about.title}</h1>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-                    <p>
-                      I hold an MSc in Supply Chain Management (University of Antwerp) and an MSc in Global Business 
-                      & Sustainability (Rotterdam School of Management). At BDO, I co-founded the sustainability 
-                      department, growing it from 2 to 13 people in 2.5 years.
-                    </p>
-                    <p>
-                      Later at Manuchar, I rolled out carbon footprinting, responsible sourcing, and the 
-                      decarbonisation roadmap — contributing to the company achieving Ecovadis Platinum.
-                    </p>
-                    <p>
-                      Now, through Sustavision, I help SMEs take pragmatic ESG actions without overwhelming their teams.
-                    </p>
+                    <p>{t.about.bio1}</p>
+                    <p>{t.about.bio2}</p>
+                    <p>{t.about.bio3}</p>
                   </div>
                   <Button size="lg" asChild>
-                    <Link to="/contact">Book your free ESG consultation</Link>
+                    <Link to="/contact">{t.about.cta}</Link>
                   </Button>
                 </div>
               </div>
@@ -82,7 +82,9 @@ const About = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Experience Timeline</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">
+                {language === "en" ? "Experience Timeline" : "Ervaring Tijdlijn"}
+              </h2>
               
               <div className="space-y-8">
                 {timeline.map((item, index) => {
@@ -114,12 +116,18 @@ const About = () => {
         <section className="py-20 bg-accent/30">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl font-bold">Let's work together</h2>
+              <h2 className="text-3xl font-bold">
+                {language === "en" ? "Let's work together" : "Laten we samenwerken"}
+              </h2>
               <p className="text-lg text-muted-foreground">
-                Ready to make ESG practical for your business? Let's discuss how I can help.
+                {language === "en" 
+                  ? "Ready to make ESG practical for your business? Let's discuss how I can help." 
+                  : "Klaar om ESG praktisch te maken voor uw bedrijf? Laten we bespreken hoe ik kan helpen."}
               </p>
               <Button size="lg" asChild>
-                <Link to="/contact">Get in touch</Link>
+                <Link to="/contact">
+                  {language === "en" ? "Get in touch" : "Neem contact op"}
+                </Link>
               </Button>
             </div>
           </div>

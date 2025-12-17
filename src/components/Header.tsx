@@ -1,20 +1,26 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.services, href: "/services" },
+    { name: t.nav.about, href: "/about" },
+    { name: t.nav.contact, href: "/contact" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "nl" : "en");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,10 +30,10 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:gap-8">
+        <div className="hidden md:flex md:items-center md:gap-6">
           {navigation.map((item) => (
             <Link
-              key={item.name}
+              key={item.href}
               to={item.href}
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 isActive(item.href) ? "text-primary" : "text-muted-foreground"
@@ -36,23 +42,42 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLanguage}
+            className="gap-2"
+          >
+            <Globe className="h-4 w-4" />
+            {language === "en" ? "NL" : "EN"}
+          </Button>
           <Button asChild>
-            <Link to="/contact">Book Free Consultation</Link>
+            <Link to="/contact">{t.nav.bookConsultation}</Link>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6 text-foreground" />
-          ) : (
-            <Menu className="h-6 w-6 text-foreground" />
-          )}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLanguage}
+            className="gap-1"
+          >
+            <Globe className="h-4 w-4" />
+            {language === "en" ? "NL" : "EN"}
+          </Button>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6 text-foreground" />
+            ) : (
+              <Menu className="h-6 w-6 text-foreground" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -61,7 +86,7 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 space-y-4">
             {navigation.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 to={item.href}
                 className={`block text-sm font-medium transition-colors hover:text-primary ${
                   isActive(item.href) ? "text-primary" : "text-muted-foreground"
@@ -73,7 +98,7 @@ const Header = () => {
             ))}
             <Button asChild className="w-full">
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Book Free Consultation
+                {t.nav.bookConsultation}
               </Link>
             </Button>
           </div>

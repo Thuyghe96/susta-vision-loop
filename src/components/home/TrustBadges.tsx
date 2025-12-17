@@ -1,22 +1,25 @@
 import { Award, Users, FileCheck, Target } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const TrustBadges = () => {
+  const { t } = useLanguage();
+  
   const badges = [
     {
       icon: Award,
-      text: "5 years sector experience",
+      text: t.trustBadges.experience,
     },
     {
       icon: Users,
-      text: "Founder-led",
+      text: t.trustBadges.founderLed,
     },
     {
       icon: FileCheck,
-      text: "CSRD & VSME expertise",
+      text: t.trustBadges.csrd,
     },
     {
       icon: Target,
-      text: "Ecovadis Platinum project experience",
+      text: t.trustBadges.ecovadis,
     },
   ];
 

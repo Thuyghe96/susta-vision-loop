@@ -1,49 +1,21 @@
 import { User, Lightbulb, Users, Puzzle, Shield, DollarSign } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const WhyChooseUs = () => {
-  const reasons = [
-    {
-      icon: User,
-      title: "Founder-led expertise",
-      description: "Work directly with an ESG expert with 5+ years of experience.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Pragmatic & hands-on",
-      description: "We focus on actions, not endless reporting.",
-    },
-    {
-      icon: Users,
-      title: "Low burden for your team",
-      description: "Designed for SMEs with limited time.",
-    },
-    {
-      icon: Puzzle,
-      title: "Modular & flexible",
-      description: "Use standalone services or the full loop.",
-    },
-    {
-      icon: Shield,
-      title: "CSRD & VSME experience",
-      description: "Practical support for EU requirements.",
-    },
-    {
-      icon: DollarSign,
-      title: "Cost-effective",
-      description: "Lean, impact-focused approach reduces wasted effort.",
-    },
-  ];
+  const { t } = useLanguage();
+  
+  const icons = [User, Lightbulb, Users, Puzzle, Shield, DollarSign];
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold">What Sets Us Apart</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">{t.whyChooseUs.title}</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
+          {t.whyChooseUs.reasons.map((reason, index) => {
+            const Icon = icons[index];
             return (
               <div
                 key={index}
