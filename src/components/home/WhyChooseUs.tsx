@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
     {
       icon: User,
       title: "Founder-led expertise",
-      description: "Work directly with Thomas — experience always, no juniors just out of school.",
+      description: "Work directly with an ESG expert with 5+ years of experience.",
     },
     {
       icon: Lightbulb,

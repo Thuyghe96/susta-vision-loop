@@ -37,26 +37,59 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // In a real application, this would send the data to a backend
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Reset form
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      services: [],
-      message: "",
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formPayload = new FormData();
+    formPayload.append("access_key", "1449be17-31ec-4c89-aceb-f567d0cacb38");
+    formPayload.append("name", formData.name);
+    formPayload.append("company", formData.company);
+    formPayload.append("email", formData.email);
+    formPayload.append("phone", formData.phone);
+    formPayload.append("services", formData.services.join(", "));
+    formPayload.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formPayload,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          services: [],
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -199,8 +232,8 @@ const Contact = () => {
                     We only use your information to follow up on your request.
                   </p>
 
-                  <Button type="submit" size="lg" className="w-full">
-                    Send message
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send message"}
                   </Button>
                 </form>
               </div>
