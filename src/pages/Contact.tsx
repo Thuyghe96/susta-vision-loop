@@ -8,9 +8,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t, language } = useLanguage();
+  
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -20,13 +23,23 @@ const Contact = () => {
     message: "",
   });
 
-  const serviceOptions = [
-    "ESG Awareness & Capacity Building",
-    "ESG Maturity Assessment & Benchmarking",
-    "ESG Strategy Development",
-    "ESG Program Implementation",
-    "Climate Action Services",
-  ];
+  const serviceOptions = language === "en" 
+    ? [
+        "ESG Awareness & Capacity Building",
+        "ESG Maturity Assessment & Benchmarking",
+        "ESG Strategy Development",
+        "ESG Program Implementation",
+        "ESG Reporting & Disclosure",
+        "Climate Action Services",
+      ]
+    : [
+        "ESG Bewustwording & Capaciteitsopbouw",
+        "ESG Maturiteitsbeoordeling & Benchmarking",
+        "ESG Strategieontwikkeling",
+        "ESG Programma-implementatie",
+        "ESG Rapportering & Openbaarmaking",
+        "Klimaatactiediensten",
+      ];
 
   const handleServiceToggle = (service: string) => {
     setFormData((prev) => ({
@@ -62,8 +75,8 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Message sent!",
-          description: "We'll get back to you as soon as possible.",
+          title: t.contact.success,
+          description: t.contact.successDesc,
         });
 
         setFormData({
@@ -76,15 +89,15 @@ const Contact = () => {
         });
       } else {
         toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
+          title: t.contact.error,
+          description: t.contact.errorDesc,
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: t.contact.error,
+        description: t.contact.errorDesc,
         variant: "destructive",
       });
     } finally {
@@ -100,9 +113,11 @@ const Contact = () => {
         <section className="py-20 bg-gradient-to-b from-accent/50 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold">Ready to simplify your ESG work?</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">
+                {language === "en" ? "Ready to simplify your ESG work?" : "Klaar om uw ESG-werk te vereenvoudigen?"}
+              </h1>
               <p className="text-lg text-muted-foreground">
-                Book your free ESG consultation and discover how we can help your business thrive sustainably.
+                {t.contact.description}
               </p>
             </div>
           </div>
@@ -115,9 +130,13 @@ const Contact = () => {
               {/* Contact Info */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6">Get in touch</h2>
+                  <h2 className="text-3xl font-bold mb-6">
+                    {language === "en" ? "Get in touch" : "Neem contact op"}
+                  </h2>
                   <p className="text-muted-foreground mb-8">
-                    Have questions or ready to start? Reach out directly or use the contact form.
+                    {language === "en" 
+                      ? "Have questions or ready to start? Reach out directly or use the contact form." 
+                      : "Vragen of klaar om te starten? Neem rechtstreeks contact op of gebruik het formulier."}
                   </p>
                 </div>
 
@@ -127,7 +146,9 @@ const Contact = () => {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Email</h3>
+                      <h3 className="font-semibold mb-2">
+                        {language === "en" ? "Email" : "E-mail"}
+                      </h3>
                       <a
                         href="mailto:th-consulting@outlook.be"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -142,7 +163,9 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Phone</h3>
+                      <h3 className="font-semibold mb-2">
+                        {language === "en" ? "Phone" : "Telefoon"}
+                      </h3>
                       <a
                         href="tel:+32495632266"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -158,7 +181,9 @@ const Contact = () => {
               <div className="rounded-2xl border border-border bg-card p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
+                    <Label htmlFor="name">
+                      {language === "en" ? "Name *" : "Naam *"}
+                    </Label>
                     <Input
                       id="name"
                       required
@@ -168,7 +193,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company *</Label>
+                    <Label htmlFor="company">
+                      {language === "en" ? "Company *" : "Bedrijf *"}
+                    </Label>
                     <Input
                       id="company"
                       required
@@ -178,7 +205,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">
+                      {language === "en" ? "Email *" : "E-mail *"}
+                    </Label>
                     <Input
                       id="email"
                       type="email"
@@ -189,7 +218,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone (optional)</Label>
+                    <Label htmlFor="phone">
+                      {language === "en" ? "Phone (optional)" : "Telefoon (optioneel)"}
+                    </Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -199,7 +230,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Service(s) of interest</Label>
+                    <Label>
+                      {language === "en" ? "Service(s) of interest" : "Dienst(en) van interesse"}
+                    </Label>
                     {serviceOptions.map((service) => (
                       <div key={service} className="flex items-center space-x-2">
                         <Checkbox
@@ -218,7 +251,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="message">
+                      {language === "en" ? "Message *" : "Bericht *"}
+                    </Label>
                     <Textarea
                       id="message"
                       required
@@ -229,11 +264,15 @@ const Contact = () => {
                   </div>
 
                   <p className="text-xs text-muted-foreground">
-                    We only use your information to follow up on your request.
+                    {language === "en" 
+                      ? "We only use your information to follow up on your request." 
+                      : "We gebruiken uw gegevens enkel om op uw aanvraag te reageren."}
                   </p>
 
                   <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send message"}
+                    {isSubmitting 
+                      ? (language === "en" ? "Sending..." : "Verzenden...") 
+                      : (language === "en" ? "Send message" : "Verstuur bericht")}
                   </Button>
                 </form>
               </div>

@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Award } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Hero = () => {
+  const { t, language } = useLanguage();
+  
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background waves */}
@@ -25,22 +28,22 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance">
-              ESG made simple — empowering businesses to thrive sustainably
+              {t.hero.title}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Hands-on ESG support for SMEs, we handle the heavy lifting so your team can focus on running the business.
+              {t.hero.subtitle}
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link to="/contact">
-                Book your free ESG consultation now
+                {t.hero.cta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/services">View our services</Link>
+              <Link to="/services">{t.hero.secondaryCta}</Link>
             </Button>
           </div>
 
@@ -48,7 +51,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-3 rounded-lg border border-primary/20 bg-accent/50 px-4 py-3">
             <Award className="h-5 w-5 text-primary" />
             <p className="text-sm font-medium">
-              Founder-led: Thomas Huyghe — 5+ years in ESG
+              {language === "en" ? "Founder-led: Thomas Huyghe — 5+ years in ESG" : "Oprichter-geleid: Thomas Huyghe — 5+ jaar in ESG"}
             </p>
           </div>
         </div>

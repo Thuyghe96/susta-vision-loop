@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.about, href: "/about" },
+    { name: t.nav.services, href: "/services" },
+    { name: t.nav.contact, href: "/contact" },
   ];
 
   return (
@@ -16,15 +19,15 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold text-primary mb-2">Sustavision</h3>
-            <p className="text-sm text-muted-foreground">ESG made practical.</p>
+            <p className="text-sm text-muted-foreground">{t.footer.tagline}</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     to={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -38,7 +41,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{t.footer.contact}</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -46,7 +49,7 @@ const Footer = () => {
                   className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4" />
-                  th-consulting@outlook.be
+                  {t.footer.email}
                 </a>
               </li>
               <li>
@@ -55,7 +58,7 @@ const Footer = () => {
                   className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4" />
-                  +32 495 632 266
+                  {t.footer.phone}
                 </a>
               </li>
             </ul>
@@ -64,7 +67,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-primary/20">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Sustavision. All rights reserved.
+            © {new Date().getFullYear()} Sustavision. {t.footer.rights}
           </p>
         </div>
       </div>
