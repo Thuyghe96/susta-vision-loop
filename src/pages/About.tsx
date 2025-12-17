@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GraduationCap, Building2, TrendingUp, Target } from "lucide-react";
+import thomasPhoto from "@/assets/thomas-huyghe.jfif";
 
 const About = () => {
   const timeline = [
@@ -46,25 +47,32 @@ const About = () => {
         <section className="py-20 bg-gradient-to-b from-accent/50 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold">Hi — I'm Thomas Huyghe. I make ESG practical.</h1>
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-                  <p>
-                    I hold an MSc in Supply Chain Management (University of Antwerp) and an MSc in Global Business 
-                    & Sustainability (Rotterdam School of Management). At BDO, I co-founded the sustainability 
-                    department, growing it from 2 to 13 people in 2.5 years.
-                  </p>
-                  <p>
-                    Later at Manuchar, I rolled out carbon footprinting, responsible sourcing, and the 
-                    decarbonisation roadmap — contributing to the company achieving Ecovadis Platinum.
-                  </p>
-                  <p>
-                    Now, through Sustavision, I help SMEs take pragmatic ESG actions without overwhelming their teams.
-                  </p>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <img 
+                  src={thomasPhoto} 
+                  alt="Thomas Huyghe" 
+                  className="w-32 h-32 rounded-full object-cover border-4 border-primary/20 shadow-lg flex-shrink-0"
+                />
+                <div className="space-y-6">
+                  <h1 className="text-4xl md:text-5xl font-bold">Hi — I'm Thomas Huyghe. I make ESG practical.</h1>
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                    <p>
+                      I hold an MSc in Supply Chain Management (University of Antwerp) and an MSc in Global Business 
+                      & Sustainability (Rotterdam School of Management). At BDO, I co-founded the sustainability 
+                      department, growing it from 2 to 13 people in 2.5 years.
+                    </p>
+                    <p>
+                      Later at Manuchar, I rolled out carbon footprinting, responsible sourcing, and the 
+                      decarbonisation roadmap — contributing to the company achieving Ecovadis Platinum.
+                    </p>
+                    <p>
+                      Now, through Sustavision, I help SMEs take pragmatic ESG actions without overwhelming their teams.
+                    </p>
+                  </div>
+                  <Button size="lg" asChild>
+                    <Link to="/contact">Book your free ESG consultation</Link>
+                  </Button>
                 </div>
-                <Button size="lg" asChild>
-                  <Link to="/contact">Book your free ESG consultation</Link>
-                </Button>
               </div>
             </div>
           </div>
