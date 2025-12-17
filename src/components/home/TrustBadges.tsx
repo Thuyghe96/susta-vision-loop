@@ -8,7 +8,7 @@ const TrustBadges = () => {
     },
     {
       icon: Users,
-      text: "Founder-led: no juniors",
+      text: "Founder-led",
     },
     {
       icon: FileCheck,
