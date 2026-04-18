@@ -118,40 +118,49 @@ const ServiceLoop = () => {
 
         {/* Mobile / tablet stack */}
         <div className="mt-12 grid gap-4 lg:hidden md:grid-cols-2">
-          {steps.map((step, i) => (
-            <div
-              key={i}
-              className="rounded-md border border-hairline bg-background p-6 shadow-soft"
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-              tabIndex={0}
-              onFocus={() => setHovered(i)}
-              onBlur={() => setHovered(null)}
-            >
-              <div className="mb-3 flex items-baseline gap-3">
-                <span className="font-display text-sm text-primary/60 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="font-display text-lg leading-tight text-foreground">{step.title}</h3>
-              </div>
-              <p className="text-sm leading-relaxed text-muted-foreground">{step.shortDesc}</p>
-              <div className="mt-4 space-y-3 border-t border-hairline pt-4">
-                <div>
-                  <p className="eyebrow mb-1 text-[0.6rem]">{t.process.objective}</p>
-                  <p className="text-xs leading-relaxed text-muted-foreground">{step.objective}</p>
+          {steps.map((step, i) => {
+            const isOpen = hovered === i;
+            return (
+              <div
+                key={i}
+                className={`rounded-md border bg-background p-6 shadow-soft transition-all duration-200 ${
+                  isOpen ? "border-primary/40 shadow-card" : "border-hairline"
+                }`}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setHovered(isOpen ? null : i)}
+                tabIndex={0}
+                onFocus={() => setHovered(i)}
+                onBlur={() => setHovered(null)}
+              >
+                <div className="mb-3 flex items-baseline gap-3">
+                  <span className="font-display text-sm text-primary/60 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="font-display text-lg leading-tight text-foreground">{step.title}</h3>
                 </div>
-                <div>
-                  <p className="eyebrow mb-1 text-[0.6rem]">{t.process.deliverables}</p>
-                  <ul className="space-y-1">
-                    {step.deliverables.map((d, di) => (
-                      <li key={di} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <CheckCircle2 className="mt-0.5 h-3 w-3 flex-shrink-0 text-primary" />
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {isOpen ? (
+                  <div className="space-y-3 animate-in fade-in duration-200">
+                    <div>
+                      <p className="eyebrow mb-1 text-[0.6rem]">{t.process.objective}</p>
+                      <p className="text-xs leading-relaxed text-muted-foreground">{step.objective}</p>
+                    </div>
+                    <div>
+                      <p className="eyebrow mb-1 text-[0.6rem]">{t.process.deliverables}</p>
+                      <ul className="space-y-1">
+                        {step.deliverables.map((d, di) => (
+                          <li key={di} className="flex items-start gap-2 text-xs text-muted-foreground">
+                            <CheckCircle2 className="mt-0.5 h-3 w-3 flex-shrink-0 text-primary" />
+                            <span>{d}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-sm leading-relaxed text-muted-foreground">{step.shortDesc}</p>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-10 text-center lg:hidden">

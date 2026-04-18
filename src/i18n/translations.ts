@@ -8,14 +8,14 @@ export const translations = {
       bookConsultation: "Book a call",
     },
     hero: {
-      eyebrow: "Boutique ESG advisory · Belgium & Netherlands",
+      eyebrow: "Boutique ESG advisory",
       title: "ESG that fits the way your business actually runs.",
       subtitle: "Sustavision helps SMEs turn ESG requirements, customer expectations, and reporting deadlines into clear, manageable action — without the overhead of a large consultancy.",
       positioning: "Clear ESG direction. Practical execution.",
       cta: "Book an introductory call",
       secondaryCta: "Explore services",
       altHeadline1: "Turn ESG requirements into clear, manageable action.",
-      altHeadline2: "Boutique ESG advisory for SMEs in Belgium and the Netherlands.",
+      altHeadline2: "Boutique ESG advisory for SMEs.",
       altHeadline3: "Senior ESG support, sized for SMEs.",
     },
     trustStrip: {
@@ -23,7 +23,7 @@ export const translations = {
         "Boutique ESG advisory",
         "Founder-led, senior delivery",
         "Reporting · Carbon · Supply chain · Implementation",
-        "Belgium & Netherlands focus",
+        "Senior advisory, no junior hand-offs",
       ],
     },
     triggers: {
@@ -157,7 +157,7 @@ export const translations = {
       secondary: "Or email thomas@sustavision.com",
     },
     footer: {
-      tagline: "Boutique ESG advisory for SMEs in Belgium and the Netherlands.",
+      tagline: "Boutique ESG advisory for SMEs.",
       positioning: "Clear ESG direction. Practical execution.",
       quickLinks: "Navigate",
       contact: "Contact",
@@ -207,14 +207,14 @@ export const translations = {
       bookConsultation: "Plan een gesprek",
     },
     hero: {
-      eyebrow: "Boutique ESG-advies · België & Nederland",
+      eyebrow: "Boutique ESG-advies",
       title: "ESG dat past bij hoe uw bedrijf écht werkt.",
       subtitle: "Sustavision helpt KMO's om ESG-vereisten, klantverwachtingen en rapportagedeadlines om te zetten in heldere, beheersbare actie — zonder de overhead van een groot kantoor.",
       positioning: "Heldere ESG-richting. Praktische uitvoering.",
       cta: "Plan een kennismaking",
       secondaryCta: "Bekijk diensten",
       altHeadline1: "Zet ESG-vereisten om in heldere, beheersbare actie.",
-      altHeadline2: "Boutique ESG-advies voor KMO's in België en Nederland.",
+      altHeadline2: "Boutique ESG-advies voor KMO's.",
       altHeadline3: "Ervaren ESG-ondersteuning, op KMO-maat.",
     },
     trustStrip: {
@@ -222,7 +222,7 @@ export const translations = {
         "Boutique ESG-advies",
         "Oprichter-geleid, senior uitvoering",
         "Rapportering · Carbon · Keten · Implementatie",
-        "Focus België & Nederland",
+        "Senior advies, geen junior overdrachten",
       ],
     },
     triggers: {
@@ -356,7 +356,7 @@ export const translations = {
       secondary: "Of mail thomas@sustavision.com",
     },
     footer: {
-      tagline: "Boutique ESG-advies voor KMO's in België en Nederland.",
+      tagline: "Boutique ESG-advies voor KMO's.",
       positioning: "Heldere ESG-richting. Praktische uitvoering.",
       quickLinks: "Navigatie",
       contact: "Contact",
