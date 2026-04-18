@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/sustavision-logo.jpg";
+import logo from "@/assets/sustavision-logo.png";
 
 const Header = () => {
   const location = useLocation();
