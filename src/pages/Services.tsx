@@ -15,7 +15,7 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="border-b border-border bg-gradient-soft py-24 md:py-36">
+        <section className="border-b border-hairline bg-gradient-soft py-24 md:py-36">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-4xl">
               <p className="eyebrow mb-6">{t.services.eyebrow}</p>

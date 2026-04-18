@@ -4,7 +4,7 @@ const ExperienceSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative border-b border-border bg-foreground py-24 text-background md:py-32">
+    <section className="relative border-b border-background/15 bg-foreground py-24 text-background md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary-glow">

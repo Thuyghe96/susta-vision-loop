@@ -4,7 +4,7 @@ const WhyChooseUs = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="border-b border-border bg-background py-24 md:py-32">
+    <section className="border-b border-hairline bg-secondary/50 py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
