@@ -10,7 +10,7 @@ export const translations = {
     hero: {
       eyebrow: "Boutique ESG advisory",
       title: "ESG that fits the way your business actually runs.",
-      subtitle: "Sustavision helps SMEs turn ESG requirements, customer expectations, and reporting deadlines into clear, manageable action — without the overhead of a large consultancy.",
+      subtitle: "Sustavision helps SMEs turn ESG requirements, customer expectations, and reporting deadlines into clear, manageable action - without the overhead of a large consultancy.",
       positioning: "Clear ESG direction. Practical execution.",
       cta: "Book an introductory call",
       secondaryCta: "Explore services",
@@ -61,7 +61,7 @@ export const translations = {
         {
           title: "Carbon footprinting & climate action",
           covers: "Scope 1, 2, 3 inventories, hotspot analysis, science-aligned targets, reduction roadmaps, and climate risk.",
-          when: "Customers, regulators, or financiers are asking for emissions data — or you want a credible decarbonisation plan.",
+          when: "Customers, regulators, or financiers are asking for emissions data - or you want a credible decarbonisation plan.",
           result: "A defensible footprint and a prioritised set of reduction moves with owners and timelines.",
         },
         {
@@ -74,7 +74,7 @@ export const translations = {
           title: "ESG implementation & KPI follow-through",
           covers: "Action plans, KPI design, governance, internal routines, and hands-on programme management.",
           when: "A strategy or report exists on paper, but execution is stalling or buried under day-to-day work.",
-          result: "ESG that actually moves — owned by your team, supported by ours, measured every quarter.",
+          result: "ESG that actually moves - owned by your team, supported by ours, measured every quarter.",
         },
       ],
       detailCovers: "What it covers",
@@ -87,7 +87,7 @@ export const translations = {
       description: "Five steps, used end-to-end or as standalone engagements. Iterative by design, because ESG is not a one-off project.",
       cycleCta: "Iterative by design",
       cycleTitle: "Built to repeat, not to restart.",
-      cycleDesc1: "ESG expectations, regulation, and stakeholder questions evolve every year. We design each engagement so the work compounds — your baseline, materiality, KPIs, and disclosures get sharper with every cycle.",
+      cycleDesc1: "ESG expectations, regulation, and stakeholder questions evolve every year. We design each engagement so the work compounds - your baseline, materiality, KPIs, and disclosures get sharper with every cycle.",
       cycleDesc2: "That means lower cost per cycle, faster answers to customers and auditors, and a quiet, durable ESG capability inside your business.",
       objective: "Objective",
       deliverables: "Deliverables",
@@ -102,13 +102,13 @@ export const translations = {
         {
           title: "Assess the current baseline",
           shortDesc: "Maturity check, data review, supplier and peer benchmarking.",
-          objective: "Establish where you stand today — honestly, without inflating or under-selling the work already done.",
+          objective: "Establish where you stand today - honestly, without inflating or under-selling the work already done.",
           deliverables: ["Maturity assessment", "Baseline data review", "Peer & supplier benchmarking"],
         },
         {
           title: "Prioritise what matters most",
           shortDesc: "Materiality, ambition setting, and a sequenced roadmap.",
-          objective: "Decide what to act on, in what order, and at what depth — based on impact and feasibility.",
+          objective: "Decide what to act on, in what order, and at what depth - based on impact and feasibility.",
           deliverables: ["Materiality view", "ESG strategy & ambitions", "Sequenced roadmap"],
         },
         {
@@ -120,7 +120,7 @@ export const translations = {
         {
           title: "Support reporting & follow-through",
           shortDesc: "Reporting structure, disclosure, customer & framework responses.",
-          objective: "Turn the work into clear, defensible communication — internally, to customers, and in formal disclosures.",
+          objective: "Turn the work into clear, defensible communication - internally, to customers, and in formal disclosures.",
           deliverables: ["Reporting blueprint", "CSRD / VSME alignment", "Customer & framework responses"],
         },
       ],
@@ -131,9 +131,9 @@ export const translations = {
       reasons: [
         { title: "Senior involvement, every engagement", description: "You work directly with the founder, not a rotating bench of juniors learning on your project." },
         { title: "Practical over theoretical", description: "Frameworks where they help, plain action where they don't. We optimise for what your team can actually run." },
-        { title: "Built for lean teams", description: "We adapt to companies without a dedicated ESG department — minimal internal overhead, maximum forward motion." },
+        { title: "Built for lean teams", description: "We adapt to companies without a dedicated ESG department - minimal internal overhead, maximum forward motion." },
         { title: "Multiple entry points", description: "Strategy, reporting, carbon, supply chain, or implementation. Start where the pressure is, expand when it pays off." },
-        { title: "EU & market fluency", description: "CSRD, VSME, EcoVadis, CDP, customer questionnaires — current expectations, current language, current evidence." },
+        { title: "EU & market fluency", description: "CSRD, VSME, EcoVadis, CDP, customer questionnaires - current expectations, current language, current evidence." },
         { title: "Calm, no-nonsense execution", description: "Direct communication, honest scoping, and a working style that respects your time and your business." },
       ],
     },
@@ -169,14 +169,14 @@ export const translations = {
       eyebrow: "About",
       title: "Founder-led ESG advisory, built on operational experience.",
       bio1: "Sustavision is led by Thomas Huyghe. MSc in Supply Chain Management (University of Antwerp) and MSc in Global Business & Sustainability (Rotterdam School of Management).",
-      bio2: "Earlier at BDO, he co-founded the sustainability practice and helped scale it from 2 to 13 consultants in 2.5 years. At Manuchar, he led carbon footprinting, responsible sourcing, and the decarbonisation roadmap — work that contributed to the company achieving EcoVadis Platinum.",
-      bio3: "Sustavision exists to make that level of ESG advisory available to SMEs and growing companies — without the layers, overhead, or theoretical detour of a large consultancy.",
+      bio2: "Earlier at BDO, he co-founded the sustainability practice and helped scale it from 2 to 13 consultants in 2.5 years. At Manuchar, he led carbon footprinting, responsible sourcing, and the decarbonisation roadmap - work that contributed to the company achieving EcoVadis Platinum.",
+      bio3: "Sustavision exists to make that level of ESG advisory available to SMEs and growing companies - without the layers, overhead, or theoretical detour of a large consultancy.",
       cta: "Book an introductory call",
       journeyTitle: "Background",
     },
     servicesPage: {
       title: "Services built around real ESG triggers.",
-      description: "From a single questionnaire response to a multi-year ESG programme — five service areas, used standalone or as a connected loop.",
+      description: "From a single questionnaire response to a multi-year ESG programme - five service areas, used standalone or as a connected loop.",
       cta: "Discuss your situation",
     },
     contact: {
@@ -209,7 +209,7 @@ export const translations = {
     hero: {
       eyebrow: "Boutique ESG-advies",
       title: "ESG dat past bij hoe uw bedrijf écht werkt.",
-      subtitle: "Sustavision helpt KMO's om ESG-vereisten, klantverwachtingen en rapportagedeadlines om te zetten in heldere, beheersbare actie — zonder de overhead van een groot kantoor.",
+      subtitle: "Sustavision helpt KMO's om ESG-vereisten, klantverwachtingen en rapportagedeadlines om te zetten in heldere, beheersbare actie - zonder de overhead van een groot kantoor.",
       positioning: "Heldere ESG-richting. Praktische uitvoering.",
       cta: "Plan een kennismaking",
       secondaryCta: "Bekijk diensten",
@@ -260,7 +260,7 @@ export const translations = {
         {
           title: "Carbon footprinting & klimaatactie",
           covers: "Scope 1-, 2- en 3-inventarissen, hotspot-analyse, science-based targets, reductieroadmaps en klimaatrisico.",
-          when: "Klanten, regelgevers of financiers vragen emissiedata — of u wil een geloofwaardig decarbonisatieplan.",
+          when: "Klanten, regelgevers of financiers vragen emissiedata - of u wil een geloofwaardig decarbonisatieplan.",
           result: "Een verdedigbare footprint en een geprioriteerde set reductiemaatregelen met eigenaars en timing.",
         },
         {
@@ -273,7 +273,7 @@ export const translations = {
           title: "ESG-implementatie & KPI-opvolging",
           covers: "Actieplannen, KPI-design, governance, interne routines en hands-on programmamanagement.",
           when: "Er is een strategie of rapport op papier, maar de uitvoering loopt vast tussen de dagelijkse werking.",
-          result: "ESG die effectief vooruit gaat — gedragen door uw team, ondersteund door ons, elk kwartaal gemeten.",
+          result: "ESG die effectief vooruit gaat - gedragen door uw team, ondersteund door ons, elk kwartaal gemeten.",
         },
       ],
       detailCovers: "Wat het omvat",
@@ -286,7 +286,7 @@ export const translations = {
       description: "Vijf stappen, end-to-end of als losse opdracht. Iteratief van opzet, want ESG is geen eenmalig project.",
       cycleCta: "Iteratief van opzet",
       cycleTitle: "Gebouwd om te herhalen, niet om opnieuw te starten.",
-      cycleDesc1: "ESG-verwachtingen, regelgeving en stakeholdervragen evolueren elk jaar. We zetten elke opdracht zo op dat het werk zich opbouwt — uw baseline, materialiteit, KPI's en disclosures worden scherper met elke cyclus.",
+      cycleDesc1: "ESG-verwachtingen, regelgeving en stakeholdervragen evolueren elk jaar. We zetten elke opdracht zo op dat het werk zich opbouwt - uw baseline, materialiteit, KPI's en disclosures worden scherper met elke cyclus.",
       cycleDesc2: "Dat betekent een lagere kost per cyclus, snellere antwoorden aan klanten en auditors, en een stille, duurzame ESG-capaciteit binnen uw bedrijf.",
       objective: "Doelstelling",
       deliverables: "Deliverables",
@@ -301,13 +301,13 @@ export const translations = {
         {
           title: "De huidige baseline beoordelen",
           shortDesc: "Maturiteitscheck, data-review, leveranciers- en peer-benchmarking.",
-          objective: "Eerlijk vaststellen waar u vandaag staat — zonder op te kloppen of te onderschatten.",
+          objective: "Eerlijk vaststellen waar u vandaag staat - zonder op te kloppen of te onderschatten.",
           deliverables: ["Maturiteitsbeoordeling", "Baseline data-review", "Peer- & leveranciersbenchmark"],
         },
         {
           title: "Prioriteren wat het meeste telt",
           shortDesc: "Materialiteit, ambitiebepaling en een gefaseerde roadmap.",
-          objective: "Beslissen waarop te handelen, in welke volgorde en met welke diepgang — op basis van impact en haalbaarheid.",
+          objective: "Beslissen waarop te handelen, in welke volgorde en met welke diepgang - op basis van impact en haalbaarheid.",
           deliverables: ["Materialiteitsbeeld", "ESG-strategie & ambities", "Gefaseerde roadmap"],
         },
         {
@@ -319,7 +319,7 @@ export const translations = {
         {
           title: "Rapportering & opvolging ondersteunen",
           shortDesc: "Rapportagestructuur, disclosure, klant- en frameworkantwoorden.",
-          objective: "Het werk omzetten in heldere, verdedigbare communicatie — intern, naar klanten en in formele disclosures.",
+          objective: "Het werk omzetten in heldere, verdedigbare communicatie - intern, naar klanten en in formele disclosures.",
           deliverables: ["Rapporteringsblauwdruk", "CSRD / VSME-afstemming", "Klant- & frameworkantwoorden"],
         },
       ],
@@ -330,9 +330,9 @@ export const translations = {
       reasons: [
         { title: "Senior betrokkenheid, elke opdracht", description: "U werkt rechtstreeks met de oprichter, niet met een wisselend team junioren dat op uw project leert." },
         { title: "Praktisch boven theoretisch", description: "Kaders waar ze helpen, gewoon werk waar ze dat niet doen. We optimaliseren voor wat uw team effectief kan uitvoeren." },
-        { title: "Gemaakt voor lean teams", description: "Wij passen ons aan bedrijven zonder ESG-afdeling aan — minimale interne overhead, maximale voortgang." },
+        { title: "Gemaakt voor lean teams", description: "Wij passen ons aan bedrijven zonder ESG-afdeling aan - minimale interne overhead, maximale voortgang." },
         { title: "Meerdere instappunten", description: "Strategie, rapportering, carbon, keten of implementatie. Start waar de druk zit, breid uit waar het loont." },
-        { title: "EU- & marktkennis", description: "CSRD, VSME, EcoVadis, CDP, klantvragenlijsten — actuele verwachtingen, actuele taal, actuele onderbouwing." },
+        { title: "EU- & marktkennis", description: "CSRD, VSME, EcoVadis, CDP, klantvragenlijsten - actuele verwachtingen, actuele taal, actuele onderbouwing." },
         { title: "Rustige, no-nonsense uitvoering", description: "Directe communicatie, eerlijke scoping en een werkstijl die uw tijd en uw bedrijf respecteert." },
       ],
     },
@@ -368,14 +368,14 @@ export const translations = {
       eyebrow: "Over ons",
       title: "Oprichter-geleid ESG-advies, gebouwd op operationele ervaring.",
       bio1: "Sustavision wordt geleid door Thomas Huyghe. MSc in Supply Chain Management (Universiteit Antwerpen) en MSc in Global Business & Sustainability (Rotterdam School of Management).",
-      bio2: "Eerder bij BDO was hij mede-oprichter van de sustainability-praktijk en hielp deze groeien van 2 naar 13 consultants in 2,5 jaar. Bij Manuchar leidde hij carbon footprinting, responsible sourcing en de decarbonisatieroadmap — werk dat bijdroeg tot het behalen van EcoVadis Platinum.",
-      bio3: "Sustavision bestaat om dit niveau van ESG-advies beschikbaar te maken voor KMO's en groeiende bedrijven — zonder de lagen, overhead of theoretische omweg van een groot kantoor.",
+      bio2: "Eerder bij BDO was hij mede-oprichter van de sustainability-praktijk en hielp deze groeien van 2 naar 13 consultants in 2,5 jaar. Bij Manuchar leidde hij carbon footprinting, responsible sourcing en de decarbonisatieroadmap - werk dat bijdroeg tot het behalen van EcoVadis Platinum.",
+      bio3: "Sustavision bestaat om dit niveau van ESG-advies beschikbaar te maken voor KMO's en groeiende bedrijven - zonder de lagen, overhead of theoretische omweg van een groot kantoor.",
       cta: "Plan een kennismaking",
       journeyTitle: "Achtergrond",
     },
     servicesPage: {
       title: "Diensten gebouwd rond echte ESG-aanleidingen.",
-      description: "Van één enkel vragenlijstantwoord tot een meerjarig ESG-programma — vijf dienstendomeinen, los of als verbonden cyclus inzetbaar.",
+      description: "Van één enkel vragenlijstantwoord tot een meerjarig ESG-programma - vijf dienstendomeinen, los of als verbonden cyclus inzetbaar.",
       cta: "Bespreek uw situatie",
     },
     contact: {

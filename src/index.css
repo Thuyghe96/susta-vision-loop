@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sustavision design system — boutique ESG advisory.
+/* Sustavision design system - boutique ESG advisory.
    Calm ink + deep teal palette, refined serif display, sober sans body.
    All colors MUST be HSL.
 */
@@ -21,7 +21,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 200 30% 12%;
 
-    /* Brand — deep boutique teal */
+    /* Brand - deep boutique teal */
     --primary: 184 64% 22%;            /* deep teal */
     --primary-foreground: 36 30% 98%;
     --primary-glow: 184 50% 38%;
