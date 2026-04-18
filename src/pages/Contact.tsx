@@ -13,7 +13,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const Contact = () => {
   const { toast } = useToast();
   const { t, language } = useLanguage();
-  
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -23,23 +23,7 @@ const Contact = () => {
     message: "",
   });
 
-  const serviceOptions = language === "en" 
-    ? [
-        "ESG Awareness & Capacity Building",
-        "ESG Maturity Assessment & Benchmarking",
-        "ESG Strategy Development",
-        "ESG Program Implementation",
-        "ESG Reporting & Disclosure",
-        "Climate Action Services",
-      ]
-    : [
-        "ESG Bewustwording & Capaciteitsopbouw",
-        "ESG Maturiteitsbeoordeling & Benchmarking",
-        "ESG Strategieontwikkeling",
-        "ESG Programma-implementatie",
-        "ESG Rapportering & Openbaarmaking",
-        "Klimaatactiediensten",
-      ];
+  const serviceOptions = t.services.items.map((s) => s.title);
 
   const handleServiceToggle = (service: string) => {
     setFormData((prev) => ({
@@ -70,209 +54,117 @@ const Contact = () => {
         method: "POST",
         body: formPayload,
       });
-
       const result = await response.json();
-
       if (result.success) {
-        toast({
-          title: t.contact.success,
-          description: t.contact.successDesc,
-        });
-
-        setFormData({
-          name: "",
-          company: "",
-          email: "",
-          phone: "",
-          services: [],
-          message: "",
-        });
+        toast({ title: t.contact.success, description: t.contact.successDesc });
+        setFormData({ name: "", company: "", email: "", phone: "", services: [], message: "" });
       } else {
-        toast({
-          title: t.contact.error,
-          description: t.contact.errorDesc,
-          variant: "destructive",
-        });
+        toast({ title: t.contact.error, description: t.contact.errorDesc, variant: "destructive" });
       }
-    } catch (error) {
-      toast({
-        title: t.contact.error,
-        description: t.contact.errorDesc,
-        variant: "destructive",
-      });
+    } catch {
+      toast({ title: t.contact.error, description: t.contact.errorDesc, variant: "destructive" });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-accent/50 to-background">
+        <section className="border-b border-border bg-gradient-soft py-24 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold">
-                {language === "en" ? "Ready to simplify your ESG work?" : "Klaar om uw ESG-werk te vereenvoudigen?"}
+            <div className="mx-auto max-w-3xl">
+              <p className="eyebrow mb-6">{t.nav.contact}</p>
+              <h1 className="font-display text-4xl leading-tight md:text-6xl text-balance">
+                {t.contact.title}
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="mt-6 text-lg text-muted-foreground text-pretty">
                 {t.contact.description}
               </p>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Contact Info */}
-              <div className="space-y-8">
+            <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1fr_1.3fr]">
+              <div className="space-y-10">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6">
-                    {language === "en" ? "Get in touch" : "Neem contact op"}
+                  <p className="eyebrow mb-4">{t.contact.directContact}</p>
+                  <h2 className="font-display text-2xl md:text-3xl">
+                    {language === "en" ? "Direct, personal, no gatekeeper." : "Rechtstreeks, persoonlijk, geen gatekeeper."}
                   </h2>
-                  <p className="text-muted-foreground mb-8">
-                    {language === "en" 
-                      ? "Have questions or ready to start? Reach out directly or use the contact form." 
-                      : "Vragen of klaar om te starten? Neem rechtstreeks contact op of gebruik het formulier."}
-                  </p>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4 p-6 rounded-lg border border-border bg-card">
-                    <div className="flex-shrink-0 rounded-lg bg-accent p-3">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
+                <div className="space-y-5">
+                  <a href="mailto:thomas@sustavision.com" className="group flex items-start gap-4 border-t border-hairline pt-5 transition-colors hover:text-primary">
+                    <Mail className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                     <div>
-                      <h3 className="font-semibold mb-2">
-                        {language === "en" ? "Email" : "E-mail"}
-                      </h3>
-                      <a
-                        href="mailto:th-consulting@outlook.be"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        th-consulting@outlook.be
-                      </a>
+                      <p className="eyebrow mb-1">{language === "en" ? "Email" : "E-mail"}</p>
+                      <p className="font-display text-lg text-foreground group-hover:text-primary">thomas@sustavision.com</p>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 p-6 rounded-lg border border-border bg-card">
-                    <div className="flex-shrink-0 rounded-lg bg-accent p-3">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
+                  </a>
+                  <a href="tel:+32495632266" className="group flex items-start gap-4 border-t border-hairline pt-5 transition-colors hover:text-primary">
+                    <Phone className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                     <div>
-                      <h3 className="font-semibold mb-2">
-                        {language === "en" ? "Phone" : "Telefoon"}
-                      </h3>
-                      <a
-                        href="tel:+32495632266"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        +32 495 632 266
-                      </a>
+                      <p className="eyebrow mb-1">{language === "en" ? "Phone" : "Telefoon"}</p>
+                      <p className="font-display text-lg text-foreground group-hover:text-primary">+32 495 632 266</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <div className="rounded-2xl border border-border bg-card p-8">
+              <div className="rounded-lg border border-hairline bg-card p-8 shadow-soft md:p-10">
+                <h2 className="font-display text-2xl mb-8">{t.contact.formTitle}</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">
-                      {language === "en" ? "Name *" : "Naam *"}
-                    </Label>
-                    <Input
-                      id="name"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    />
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">{t.contact.nameLabel} *</Label>
+                      <Input id="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company">{language === "en" ? "Company *" : "Bedrijf *"}</Label>
+                      <Input id="company" required value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} />
+                    </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="company">
-                      {language === "en" ? "Company *" : "Bedrijf *"}
-                    </Label>
-                    <Input
-                      id="company"
-                      required
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">
-                      {language === "en" ? "Email *" : "E-mail *"}
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">
-                      {language === "en" ? "Phone (optional)" : "Telefoon (optioneel)"}
-                    </Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="email">{t.contact.emailLabel} *</Label>
+                      <Input id="email" type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder={t.contact.emailPlaceholder} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">{language === "en" ? "Phone (optional)" : "Telefoon (optioneel)"}</Label>
+                      <Input id="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+                    </div>
                   </div>
 
                   <div className="space-y-3">
-                    <Label>
-                      {language === "en" ? "Service(s) of interest" : "Dienst(en) van interesse"}
-                    </Label>
-                    {serviceOptions.map((service) => (
-                      <div key={service} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={service}
-                          checked={formData.services.includes(service)}
-                          onCheckedChange={() => handleServiceToggle(service)}
-                        />
-                        <label
-                          htmlFor={service}
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-                        >
-                          {service}
-                        </label>
-                      </div>
-                    ))}
+                    <Label>{language === "en" ? "Topics of interest" : "Onderwerpen van interesse"}</Label>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {serviceOptions.map((service) => (
+                        <div key={service} className="flex items-start gap-2">
+                          <Checkbox id={service} checked={formData.services.includes(service)} onCheckedChange={() => handleServiceToggle(service)} className="mt-0.5" />
+                          <label htmlFor={service} className="text-sm leading-snug cursor-pointer">{service}</label>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">
-                      {language === "en" ? "Message *" : "Bericht *"}
-                    </Label>
-                    <Textarea
-                      id="message"
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    />
+                    <Label htmlFor="message">{t.contact.messageLabel} *</Label>
+                    <Textarea id="message" required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder={t.contact.messagePlaceholder} />
                   </div>
 
                   <p className="text-xs text-muted-foreground">
-                    {language === "en" 
-                      ? "We only use your information to follow up on your request." 
+                    {language === "en"
+                      ? "We only use your information to follow up on your request."
                       : "We gebruiken uw gegevens enkel om op uw aanvraag te reageren."}
                   </p>
 
-                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting 
-                      ? (language === "en" ? "Sending..." : "Verzenden...") 
-                      : (language === "en" ? "Send message" : "Verstuur bericht")}
+                  <Button type="submit" size="lg" className="w-full rounded-md" disabled={isSubmitting}>
+                    {isSubmitting ? t.contact.sending : t.contact.submit}
                   </Button>
                 </form>
               </div>
