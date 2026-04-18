@@ -23,7 +23,7 @@ export const translations = {
         "Boutique ESG advisory",
         "Founder-led, senior delivery",
         "Reporting · Carbon · Supply chain · Implementation",
-        "Senior advisory, no junior hand-offs",
+        "Tailor-built to your company's needs",
       ],
     },
     triggers: {
@@ -129,7 +129,7 @@ export const translations = {
       eyebrow: "Why Sustavision",
       title: "Boutique quality, sized for the way SMEs actually operate.",
       reasons: [
-        { title: "Senior involvement, every engagement", description: "You work directly with the founder, not a rotating bench of juniors learning on your project." },
+        { title: "Tailor-built to your company's needs", description: "Every engagement is shaped around your sector, size, and maturity - no off-the-shelf templates or recycled playbooks." },
         { title: "Practical over theoretical", description: "Frameworks where they help, plain action where they don't. We optimise for what your team can actually run." },
         { title: "Built for lean teams", description: "We adapt to companies without a dedicated ESG department - minimal internal overhead, maximum forward motion." },
         { title: "Multiple entry points", description: "Strategy, reporting, carbon, supply chain, or implementation. Start where the pressure is, expand when it pays off." },
@@ -222,7 +222,7 @@ export const translations = {
         "Boutique ESG-advies",
         "Oprichter-geleid, senior uitvoering",
         "Rapportering · Carbon · Keten · Implementatie",
-        "Senior advies, geen junior overdrachten",
+        "Op maat gemaakt voor uw bedrijf",
       ],
     },
     triggers: {
@@ -328,7 +328,7 @@ export const translations = {
       eyebrow: "Waarom Sustavision",
       title: "Boutique kwaliteit, op maat van hoe KMO's werkelijk werken.",
       reasons: [
-        { title: "Senior betrokkenheid, elke opdracht", description: "U werkt rechtstreeks met de oprichter, niet met een wisselend team junioren dat op uw project leert." },
+        { title: "Op maat gemaakt voor uw bedrijf", description: "Elke opdracht wordt afgestemd op uw sector, omvang en maturiteit - geen kant-en-klare templates of hergebruikte draaiboeken." },
         { title: "Praktisch boven theoretisch", description: "Kaders waar ze helpen, gewoon werk waar ze dat niet doen. We optimaliseren voor wat uw team effectief kan uitvoeren." },
         { title: "Gemaakt voor lean teams", description: "Wij passen ons aan bedrijven zonder ESG-afdeling aan - minimale interne overhead, maximale voortgang." },
         { title: "Meerdere instappunten", description: "Strategie, rapportering, carbon, keten of implementatie. Start waar de druk zit, breid uit waar het loont." },
