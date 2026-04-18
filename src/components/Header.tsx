@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import logo from "@/assets/sustavision-logo.jpg";
 
 const Header = () => {
   const location = useLocation();
@@ -24,8 +25,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="font-display text-xl font-medium tracking-tight text-foreground">
-          Sustavision
+        <Link to="/" className="flex items-center gap-2" aria-label="Sustavision home">
+          <img src={logo} alt="Sustavision" className="h-9 w-auto md:h-10" />
+          <span className="sr-only">Sustavision</span>
         </Link>
 
         <div className="hidden md:flex md:items-center md:gap-8">
