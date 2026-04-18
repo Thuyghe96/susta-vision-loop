@@ -58,7 +58,7 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-hairline pt-8 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} Sustavision. {t.footer.rights}</p>
-          <p>Belgium · Netherlands</p>
+          <p>{t.footer.positioning}</p>
         </div>
       </div>
     </footer>
