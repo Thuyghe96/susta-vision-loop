@@ -22,7 +22,7 @@ const ServiceLoop = () => {
           </p>
         </div>
 
-        {/* Desktop circular layout — minimal */}
+        {/* Desktop circular layout - minimal */}
         <div className="mx-auto mt-20 hidden max-w-5xl lg:block">
           <div className="relative mx-auto" style={{ height: "640px", width: "100%" }}>
             {/* Faint guide circle */}
