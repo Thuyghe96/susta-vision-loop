@@ -10,7 +10,7 @@ const ServiceLoop = () => {
   const steps = t.process.steps;
 
   return (
-    <section className="border-b border-border bg-secondary/40 py-24 md:py-32">
+    <section className="border-b border-hairline bg-[hsl(var(--surface-mist))] py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow mb-4">{t.process.eyebrow}</p>

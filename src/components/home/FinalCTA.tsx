@@ -7,7 +7,7 @@ const FinalCTA = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-gradient-to-b from-[hsl(var(--sand))] to-background py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <p className="eyebrow mb-4">{t.finalCta.eyebrow}</p>

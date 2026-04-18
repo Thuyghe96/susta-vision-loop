@@ -72,7 +72,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="border-b border-border bg-gradient-soft py-24 md:py-32">
+        <section className="border-b border-hairline bg-gradient-soft py-24 md:py-32">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
               <p className="eyebrow mb-6">{t.nav.contact}</p>
@@ -86,7 +86,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="py-20 md:py-28">
+        <section className="bg-background py-20 md:py-28">
           <div className="container mx-auto px-4">
             <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1fr_1.3fr]">
               <div className="space-y-10">

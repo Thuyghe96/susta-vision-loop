@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden border-b border-border bg-gradient-soft">
+    <section className="relative overflow-hidden border-b border-hairline bg-gradient-soft">
       {/* Subtle editorial background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-accent/40 blur-3xl" />

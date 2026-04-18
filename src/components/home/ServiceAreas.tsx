@@ -7,7 +7,7 @@ const ServiceAreas = () => {
   const [open, setOpen] = useState<number>(0);
 
   return (
-    <section className="border-b border-border bg-background py-24 md:py-32">
+    <section className="border-b border-hairline bg-background py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow mb-4">{t.services.eyebrow}</p>
