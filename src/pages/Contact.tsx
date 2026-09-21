@@ -18,20 +18,9 @@ const Contact = () => {
     company: "",
     email: "",
     phone: "",
-    services: [] as string[],
     message: "",
   });
 
-  const serviceOptions = t.services.items.map((s) => s.title);
-
-  const handleServiceToggle = (service: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter((s) => s !== service)
-        : [...prev.services, service],
-    }));
-  };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
