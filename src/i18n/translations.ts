@@ -72,8 +72,25 @@ export const translations = {
         },
       ],
     },
-    services: {
-      eyebrow: "Service areas",
+    whySustavision: {
+      title: "A different kind of ESG support",
+      description: "Sustavision is built for lean teams that need credible ESG support without consultant overhead or unnecessary complexity.",
+      processLine: "We start by understanding your situation, then focus on clear priorities and practical next steps.",
+      points: [
+        {
+          heading: "Senior, founder-led support",
+          text: "Direct access to an experienced ESG advisor who can both guide and execute. No handovers to junior consultants, no layered project structures. You work with someone who understands both the technical details and the business reality - and can take full responsibility for getting ESG work done.",
+        },
+        {
+          heading: "Built for SMEs",
+          text: "Proportionate scope, practical tools and limited internal burden. Support is designed around your available time, resources and priorities - not a generic, large-consultancy playbook.",
+        },
+        {
+          heading: "Operational ESG experience",
+          text: "Credible support where customer requests, regulation, carbon and supply chains meet. Experience across distribution, manufacturing and logistics-linked contexts, with a focus on what is useful and implementable.",
+        },
+      ],
+    },
       title: "Five practical ways we work with SMEs.",
       description: "Broad enough to cover the full ESG agenda, focused enough to deliver outcomes. Each area can be engaged on its own or as part of a wider programme.",
       items: [
