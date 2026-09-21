@@ -321,6 +321,25 @@ export const translations = {
         },
       ],
     },
+    whySustavision: {
+      title: "ESG-ondersteuning van een andere orde",
+      description: "Sustavision is gebouwd voor lean teams die geloofwaardige ESG-ondersteuning zoeken zonder consultantoverhead of onnodige complexiteit.",
+      processLine: "We beginnen met uw situatie te begrijpen en richten ons daarna op duidelijke prioriteiten en praktische vervolgstappen.",
+      points: [
+        {
+          heading: "Senior, founder-led ondersteuning",
+          text: "Directe toegang tot een ervaren ESG-adviseur die zowel kan begeleiden als uitvoeren. Geen doorgifte aan junior consultants, geen meerlagige projectstructuren. U werkt met iemand die zowel de technische details als de bedrijfsrealiteit begrijpt en volledige verantwoordelijkheid kan opnemen om het ESG-werk af te ronden.",
+        },
+        {
+          heading: "Gemaakt voor KMO's",
+          text: "Evenredige scope, praktische tools en beperkte interne belasting. De ondersteuning is opgebouwd rond uw beschikbare tijd, middelen en prioriteiten - niet rond een generiek playbook van een groot advieskantoor.",
+        },
+        {
+          heading: "Operationele ESG-ervaring",
+          text: "Geloofwaardige ondersteuning daar waar klantvragen, regelgeving, carbon en toeleveringsketens samenkomen. Ervaring in distributie, productie en logistiek-gerelateerde contexten, met focus op wat bruikbaar en uitvoerbaar is.",
+        },
+      ],
+    },
     services: {
       eyebrow: "Dienstendomeinen",
       title: "Vijf praktische manieren waarop we met KMO's werken.",
