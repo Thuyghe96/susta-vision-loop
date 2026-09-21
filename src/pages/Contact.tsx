@@ -140,18 +140,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <Label>{language === "en" ? "Topics of interest" : "Onderwerpen van interesse"}</Label>
-                    <div className="grid gap-2 sm:grid-cols-2">
-                      {serviceOptions.map((service) => (
-                        <div key={service} className="flex items-start gap-2">
-                          <Checkbox id={service} checked={formData.services.includes(service)} onCheckedChange={() => handleServiceToggle(service)} className="mt-0.5" />
-                          <label htmlFor={service} className="text-sm leading-snug cursor-pointer">{service}</label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   <div className="space-y-2">
                     <Label htmlFor="message">{t.contact.messageLabel} *</Label>
                     <Textarea id="message" required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder={t.contact.messagePlaceholder} />
