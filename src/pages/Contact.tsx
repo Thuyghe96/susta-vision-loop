@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -19,20 +18,9 @@ const Contact = () => {
     company: "",
     email: "",
     phone: "",
-    services: [] as string[],
     message: "",
   });
 
-  const serviceOptions = t.services.items.map((s) => s.title);
-
-  const handleServiceToggle = (service: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter((s) => s !== service)
-        : [...prev.services, service],
-    }));
-  };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -46,7 +34,6 @@ const Contact = () => {
     formPayload.append("company", formData.company);
     formPayload.append("email", formData.email);
     formPayload.append("phone", formData.phone);
-    formPayload.append("services", formData.services.join(", "));
     formPayload.append("message", formData.message);
 
     try {
@@ -57,7 +44,7 @@ const Contact = () => {
       const result = await response.json();
       if (result.success) {
         toast({ title: t.contact.success, description: t.contact.successDesc });
-        setFormData({ name: "", company: "", email: "", phone: "", services: [], message: "" });
+        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
       } else {
         toast({ title: t.contact.error, description: t.contact.errorDesc, variant: "destructive" });
       }
@@ -137,18 +124,6 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="phone">{language === "en" ? "Phone (optional)" : "Telefoon (optioneel)"}</Label>
                       <Input id="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label>{language === "en" ? "Topics of interest" : "Onderwerpen van interesse"}</Label>
-                    <div className="grid gap-2 sm:grid-cols-2">
-                      {serviceOptions.map((service) => (
-                        <div key={service} className="flex items-start gap-2">
-                          <Checkbox id={service} checked={formData.services.includes(service)} onCheckedChange={() => handleServiceToggle(service)} className="mt-0.5" />
-                          <label htmlFor={service} className="text-sm leading-snug cursor-pointer">{service}</label>
-                        </div>
-                      ))}
                     </div>
                   </div>
 
