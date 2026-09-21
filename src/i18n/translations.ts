@@ -72,6 +72,25 @@ export const translations = {
         },
       ],
     },
+    whySustavision: {
+      title: "A different kind of ESG support",
+      description: "Sustavision is built for lean teams that need credible ESG support without consultant overhead or unnecessary complexity.",
+      processLine: "We start by understanding your situation, then focus on clear priorities and practical next steps.",
+      points: [
+        {
+          heading: "Senior, founder-led support",
+          text: "Direct access to an experienced ESG advisor who can both guide and execute. No handovers to junior consultants, no layered project structures. You work with someone who understands both the technical details and the business reality - and can take full responsibility for getting ESG work done.",
+        },
+        {
+          heading: "Built for SMEs",
+          text: "Proportionate scope, practical tools and limited internal burden. Support is designed around your available time, resources and priorities - not a generic, large-consultancy playbook.",
+        },
+        {
+          heading: "Operational ESG experience",
+          text: "Credible support where customer requests, regulation, carbon and supply chains meet. Experience across distribution, manufacturing and logistics-linked contexts, with a focus on what is useful and implementable.",
+        },
+      ],
+    },
     services: {
       eyebrow: "Service areas",
       title: "Five practical ways we work with SMEs.",
@@ -299,6 +318,25 @@ export const translations = {
           heading: "Van plan naar vooruitgang",
           text: "Zet praktische maatregelen rond carbon, leveranciers en ESG in de praktijk.",
           supporting: "Meet uw voetafdruk, stel prioriteiten en zet concrete stappen rond carbon en leveranciers.",
+        },
+      ],
+    },
+    whySustavision: {
+      title: "ESG-ondersteuning van een andere orde",
+      description: "Sustavision is gebouwd voor lean teams die geloofwaardige ESG-ondersteuning zoeken zonder consultantoverhead of onnodige complexiteit.",
+      processLine: "We beginnen met uw situatie te begrijpen en richten ons daarna op duidelijke prioriteiten en praktische vervolgstappen.",
+      points: [
+        {
+          heading: "Senior, founder-led ondersteuning",
+          text: "Directe toegang tot een ervaren ESG-adviseur die zowel kan begeleiden als uitvoeren. Geen doorgifte aan junior consultants, geen meerlagige projectstructuren. U werkt met iemand die zowel de technische details als de bedrijfsrealiteit begrijpt en volledige verantwoordelijkheid kan opnemen om het ESG-werk af te ronden.",
+        },
+        {
+          heading: "Gemaakt voor KMO's",
+          text: "Evenredige scope, praktische tools en beperkte interne belasting. De ondersteuning is opgebouwd rond uw beschikbare tijd, middelen en prioriteiten - niet rond een generiek playbook van een groot advieskantoor.",
+        },
+        {
+          heading: "Operationele ESG-ervaring",
+          text: "Geloofwaardige ondersteuning daar waar klantvragen, regelgeving, carbon en toeleveringsketens samenkomen. Ervaring in distributie, productie en logistiek-gerelateerde contexten, met focus op wat bruikbaar en uitvoerbaar is.",
         },
       ],
     },

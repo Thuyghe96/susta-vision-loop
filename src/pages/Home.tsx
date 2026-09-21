@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import TrustStrip from "@/components/home/TrustStrip";
 import TriggerSection from "@/components/home/TriggerSection";
 import ServiceRoutes from "@/components/home/ServiceRoutes";
+import WhySustavision from "@/components/home/WhySustavision";
 import ExperienceSection from "@/components/home/ExperienceSection";
 import FinalCTA from "@/components/home/FinalCTA";
 
@@ -16,6 +17,7 @@ const Home = () => {
         <TrustStrip />
         <TriggerSection />
         <ServiceRoutes />
+        <WhySustavision />
         <ExperienceSection />
         <FinalCTA />
       </main>
