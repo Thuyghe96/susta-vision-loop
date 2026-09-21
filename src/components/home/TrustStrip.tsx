@@ -7,7 +7,7 @@ const TrustStrip = () => {
   return (
     <section className="border-b border-border bg-background">
       <div className="container mx-auto px-4">
-        <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-6 text-sm text-muted-foreground">
+        <ul className="mx-auto flex max-w-6xl flex-wrap items-center justify-start gap-x-10 gap-y-3 py-6 text-sm text-muted-foreground">
           {items.map((item, i) => (
             <li key={i} className="flex items-center gap-3">
               <span className="inline-block h-1 w-1 rounded-full bg-primary/60" />

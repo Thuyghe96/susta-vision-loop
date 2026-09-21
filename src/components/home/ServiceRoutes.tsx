@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Compass, FileCheck2, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SectionIntro from "@/components/home/SectionIntro";
 
 const cardIcons = [Compass, FileCheck2, TrendingUp];
 
@@ -10,23 +11,18 @@ const ServiceRoutes = () => {
   const { title, description, cta, cards } = t.serviceRoutes;
 
   return (
-    <section aria-labelledby="service-routes-heading" className="border-b border-hairline bg-[hsl(var(--sand))] py-20 md:py-28">
+    <section aria-labelledby="service-routes-heading" className="border-b border-hairline bg-secondary/60 py-20 md:py-28">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="mx-auto mb-4 block h-px w-6 bg-primary" aria-hidden="true" />
-          <h2 id="service-routes-heading" className="font-display text-3xl leading-tight text-foreground text-balance md:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground text-pretty">{description}</p>
-        </div>
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro id="service-routes-heading" title={title} description={description} />
 
-        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-5 md:mt-14 md:grid-cols-3 md:gap-6">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:mt-14 md:grid-cols-3 md:gap-6">
           {cards.map((card, index) => {
             const Icon = cardIcons[index];
             return (
               <article
                 key={card.heading}
-                className="flex flex-col rounded-md border border-hairline bg-background p-7 shadow-soft transition-shadow duration-300 hover:shadow-card md:p-8"
+                className="flex min-h-full flex-col rounded-md border border-hairline bg-background p-7 shadow-soft transition-shadow duration-300 hover:shadow-card md:p-8"
               >
                 <Icon aria-hidden="true" className="h-6 w-6 text-primary" strokeWidth={1.5} />
                 <h3 className="mt-5 font-display text-xl leading-snug text-foreground md:text-2xl">{card.heading}</h3>
@@ -39,10 +35,11 @@ const ServiceRoutes = () => {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-left md:mt-12">
           <Button size="lg" asChild className="rounded-md">
             <Link to="/services">{cta}</Link>
           </Button>
+        </div>
         </div>
       </div>
     </section>

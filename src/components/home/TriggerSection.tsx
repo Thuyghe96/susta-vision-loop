@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import customerRequestsImage from "@/assets/support-customer-requests.jpg";
 import regulatoryGuidanceImage from "@/assets/support-regulatory-guidance.jpg";
 import practicalActionImage from "@/assets/support-practical-action.jpg";
+import SectionIntro from "@/components/home/SectionIntro";
 
 const panelImages = [customerRequestsImage, regulatoryGuidanceImage, practicalActionImage];
 
@@ -13,22 +14,15 @@ const TriggerSection = () => {
   const [activePanel, setActivePanel] = useState<number | null>(null);
 
   return (
-    <section className="border-b border-hairline bg-secondary/60 py-24 md:py-32">
+    <section className="border-b border-hairline bg-background py-20 md:py-28" aria-labelledby="support-heading">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl">
-          <span className="mb-4 block h-px w-6 bg-primary" aria-hidden="true" />
-          <h2 className="font-display text-3xl leading-tight md:text-5xl text-balance">
-            {t.triggers.eyebrow}
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground text-pretty">
-            {t.triggers.description}
-          </p>
-        </div>
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro id="support-heading" title={t.triggers.eyebrow} description={t.triggers.description} />
 
-        <div
-          className="mx-auto mt-14 flex max-w-7xl flex-col overflow-hidden rounded-md bg-foreground shadow-editorial md:h-[35rem] md:flex-row"
+          <div
+          className="mt-12 flex flex-col overflow-hidden rounded-md bg-foreground shadow-card md:mt-14 md:h-[35rem] md:flex-row"
           onMouseLeave={() => setActivePanel(null)}
-        >
+          >
           {t.triggers.items.map((item, index) => {
             const isActive = activePanel === index;
 
@@ -96,6 +90,7 @@ const TriggerSection = () => {
               </Button>
             );
           })}
+          </div>
         </div>
       </div>
     </section>
