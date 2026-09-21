@@ -44,7 +44,7 @@ const Contact = () => {
       const result = await response.json();
       if (result.success) {
         toast({ title: t.contact.success, description: t.contact.successDesc });
-        setFormData({ name: "", company: "", email: "", phone: "", services: [], message: "" });
+        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
       } else {
         toast({ title: t.contact.error, description: t.contact.errorDesc, variant: "destructive" });
       }
