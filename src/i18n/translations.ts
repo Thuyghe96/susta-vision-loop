@@ -91,6 +91,8 @@ export const translations = {
         },
       ],
     },
+    services: {
+      eyebrow: "Service areas",
       title: "Five practical ways we work with SMEs.",
       description: "Broad enough to cover the full ESG agenda, focused enough to deliver outcomes. Each area can be engaged on its own or as part of a wider programme.",
       items: [
