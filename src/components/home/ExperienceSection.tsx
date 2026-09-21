@@ -1,42 +1,55 @@
+import { FlaskConical, Package, Anchor, Factory } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import bgImage from "@/assets/experience-operations.jpg";
+
+const sectorIcons = [FlaskConical, Package, Anchor, Factory];
 
 const ExperienceSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative border-b border-background/15 bg-foreground py-24 text-background md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary-glow">
-            {t.experience.eyebrow}
-          </p>
-          <h2 className="mt-4 font-display text-3xl leading-tight text-background md:text-5xl text-balance">
+    <section
+      className="relative overflow-hidden border-b border-hairline bg-foreground py-16 text-background md:py-20"
+      aria-labelledby="experience-heading"
+    >
+      <img
+        src={bgImage}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        width={1920}
+        height={864}
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-foreground/80" aria-hidden="true" />
+
+      <div className="container relative mx-auto px-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2
+            id="experience-heading"
+            className="font-display text-3xl leading-tight text-background text-balance md:text-4xl"
+          >
             {t.experience.title}
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-background/70 text-pretty">
+          <p className="mt-4 text-base leading-relaxed text-background/80 text-pretty md:text-lg">
             {t.experience.description}
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-x-10 gap-y-10 md:grid-cols-2">
-          {t.experience.sectors.map((sector, i) => (
-            <div key={i} className="border-t border-background/15 pt-6">
-              <div className="flex items-baseline gap-4">
-                <span className="font-display text-sm text-primary-glow/80 tabular-nums">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display text-xl text-background md:text-2xl">{sector.title}</h3>
-              </div>
-              <p className="mt-3 pl-9 text-sm leading-relaxed text-background/65">
-                {sector.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <p className="mx-auto mt-16 max-w-3xl text-center text-sm italic text-background/55 font-display">
-          {t.experience.footnote}
-        </p>
+        <ul className="mx-auto mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-3">
+          {t.experience.sectors.map((sector, i) => {
+            const Icon = sectorIcons[i % sectorIcons.length];
+            return (
+              <li
+                key={sector.title}
+                className="flex items-center gap-2.5 rounded-full border border-background/25 bg-background/10 px-4 py-2 text-sm text-background backdrop-blur-sm md:px-5"
+              >
+                <Icon className="h-4 w-4 shrink-0 text-primary-glow" strokeWidth={1.5} aria-hidden="true" />
+                <span>{sector.title}</span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
