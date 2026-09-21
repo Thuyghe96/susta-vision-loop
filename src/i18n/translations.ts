@@ -28,17 +28,26 @@ export const translations = {
     },
     triggers: {
       eyebrow: "Where we support",
-      title: "We can help if you are working on…",
-      description: "Most clients reach out around a specific trigger. If any of these sound familiar, we can move quickly.",
+      title: "Where we support",
+      description: "Most clients reach out when ESG requirements, customer expectations or reporting deadlines start to feel urgent. We help them quickly.",
+      exploreLabel: "Explore",
+      closeLabel: "Close",
       items: [
-        { title: "CSRD or VSME readiness", description: "Scoping, gap analysis, and a realistic path to your first compliant report." },
-        { title: "EcoVadis, CDP & customer ESG questionnaires", description: "Stronger answers, better evidence, and a higher score next cycle." },
-        { title: "ESG strategy & roadmap", description: "A material, prioritised plan that fits your size, sector, and ambition." },
-        { title: "Carbon footprinting (Scope 1, 2, 3)", description: "A defensible baseline and a clear view of where your emissions actually sit." },
-        { title: "Climate action & reduction priorities", description: "Pragmatic decarbonisation moves you can finance, sequence, and defend." },
-        { title: "ESG KPIs & internal follow-through", description: "Lightweight dashboards and routines so ESG sticks after the kickoff." },
-        { title: "Supplier & value chain ESG", description: "Supplier engagement, due diligence, and Scope 3 in proportion to your leverage." },
-        { title: "Reporting structure & disclosure", description: "Coherent narrative, sound data, and a structure that scales as you grow." },
+        {
+          title: "Customer, platform or tender requests",
+          description: "A customer, platform or tender asks for ESG information. Get clear, credible support for EcoVadis, CDP, supplier questionnaires, tender responses and sustainability-data requests - without creating unnecessary internal workload.",
+          imageAlt: "Two professionals reviewing supplier documents and a digital questionnaire",
+        },
+        {
+          title: "Regulatory and certification pressure",
+          description: "CSRD, VSME, sustainability labels and changing requirements can be difficult to navigate. Understand what applies to your business, what customers may expect, and where to focus first.",
+          imageAlt: "A sustainability advisor reviewing structured standards documents",
+        },
+        {
+          title: "Turn sustainability ambitions into practical action",
+          description: "Measure your footprint, set realistic priorities and turn sustainability ambitions into progress. Support can include carbon footprints, Scope 1-3, supplier engagement, reduction plans and SBTi-aligned target support.",
+          imageAlt: "Operations professionals reviewing sustainability data in a modern production facility",
+        },
       ],
     },
     services: {
@@ -227,17 +236,26 @@ export const translations = {
     },
     triggers: {
       eyebrow: "Waar wij ondersteunen",
-      title: "We kunnen helpen als u werkt aan…",
-      description: "De meeste klanten nemen contact op rond een concrete aanleiding. Herkent u zich in één van deze situaties, dan kunnen we snel schakelen.",
+      title: "Waar wij ondersteunen",
+      description: "De meeste klanten nemen contact op wanneer ESG-vereisten, klantverwachtingen of rapporteringsdeadlines dringend beginnen te worden. Wij helpen hen snel verder.",
+      exploreLabel: "Ontdek",
+      closeLabel: "Sluiten",
       items: [
-        { title: "CSRD- of VSME-readiness", description: "Scoping, gap-analyse en een realistisch pad naar uw eerste conforme rapport." },
-        { title: "EcoVadis, CDP & klantvragenlijsten", description: "Sterkere antwoorden, betere onderbouwing en een hogere score in de volgende cyclus." },
-        { title: "ESG-strategie & roadmap", description: "Een materiële, geprioriteerde aanpak die past bij uw schaal, sector en ambitie." },
-        { title: "Carbon footprinting (Scope 1, 2, 3)", description: "Een verdedigbare baseline en helder zicht op waar uw emissies écht zitten." },
-        { title: "Klimaatactie & reductieprioriteiten", description: "Pragmatische decarbonisatiestappen die u kunt financieren, plannen en uitleggen." },
-        { title: "ESG-KPI's & interne opvolging", description: "Lichtgewicht dashboards en routines zodat ESG na de kick-off blijft leven." },
-        { title: "Leveranciers & waardeketen-ESG", description: "Leveranciersbetrokkenheid, due diligence en Scope 3 in verhouding tot uw leverage." },
-        { title: "Rapportagestructuur & disclosure", description: "Coherente narratief, degelijke data en een structuur die meegroeit." },
+        {
+          title: "Vragen van klanten, platformen of aanbestedingen",
+          description: "Een klant, platform of aanbesteding vraagt om ESG-informatie. Krijg duidelijke, geloofwaardige ondersteuning voor EcoVadis, CDP, leveranciersvragenlijsten, aanbestedingsantwoorden en vragen om duurzaamheidsdata - zonder onnodige interne werklast te creëren.",
+          imageAlt: "Twee professionals die leveranciersdocumenten en een digitale vragenlijst bekijken",
+        },
+        {
+          title: "Druk door regelgeving en certificering",
+          description: "CSRD, VSME, duurzaamheidslabels en veranderende vereisten kunnen moeilijk te doorgronden zijn. Begrijp wat voor uw bedrijf van toepassing is, wat klanten kunnen verwachten en waarop u zich eerst moet richten.",
+          imageAlt: "Een duurzaamheidsadviseur die gestructureerde normdocumenten doorneemt",
+        },
+        {
+          title: "Zet duurzaamheidsambities om in praktische actie",
+          description: "Meet uw voetafdruk, bepaal realistische prioriteiten en zet duurzaamheidsambities om in vooruitgang. Ondersteuning kan bestaan uit CO2-voetafdrukken, Scope 1-3, leveranciersbetrokkenheid, reductieplannen en ondersteuning voor SBTi-afgestemde doelstellingen.",
+          imageAlt: "Operationele professionals die duurzaamheidsdata bekijken in een moderne productieomgeving",
+        },
       ],
     },
     services: {
