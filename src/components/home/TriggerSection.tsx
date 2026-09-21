@@ -41,7 +41,11 @@ const TriggerSection = () => {
                 aria-controls={`support-panel-${index}`}
                 onMouseEnter={() => setActivePanel(index)}
                 onFocus={() => setActivePanel(index)}
-                onClick={() => setActivePanel(isActive ? null : index)}
+                onPointerDown={(event) => {
+                  if (event.pointerType !== "mouse") {
+                    setActivePanel(isActive ? null : index);
+                  }
+                }}
                 className={`group relative h-72 min-h-72 w-full flex-1 justify-start overflow-hidden whitespace-normal rounded-none border-b border-background/20 p-0 text-left text-background transition-[flex,height] duration-500 ease-out hover:bg-transparent hover:text-background focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:ring-offset-0 md:h-full md:min-h-0 md:border-b-0 md:border-r md:last:border-r-0 ${
                   isActive ? "h-[28rem] md:flex-[1.35]" : ""
                 }`}
