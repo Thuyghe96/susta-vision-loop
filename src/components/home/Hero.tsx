@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-24 md:py-36">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <p className="eyebrow mb-6">{t.hero.eyebrow}</p>
           <h1 className="font-display text-4xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl text-balance">
             {t.hero.title}

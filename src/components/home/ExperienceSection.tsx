@@ -1,6 +1,7 @@
 import { FlaskConical, Package, Anchor, Factory } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import bgImage from "@/assets/experience-operations.jpg";
+import SectionIntro from "@/components/home/SectionIntro";
 
 const sectorIcons = [FlaskConical, Package, Anchor, Factory];
 
@@ -9,7 +10,7 @@ const ExperienceSection = () => {
 
   return (
     <section
-      className="relative overflow-hidden border-b border-hairline bg-foreground py-16 text-background md:py-20"
+      className="relative overflow-hidden border-b border-hairline bg-foreground py-20 text-background md:py-28"
       aria-labelledby="experience-heading"
     >
       <img
@@ -21,22 +22,18 @@ const ExperienceSection = () => {
         height={864}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-foreground/80" aria-hidden="true" />
+      <div className="absolute inset-0 bg-foreground/85" aria-hidden="true" />
 
       <div className="container relative mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
             id="experience-heading"
-            className="font-display text-3xl leading-tight text-background text-balance md:text-4xl"
-          >
-            {t.experience.title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-background/80 text-pretty md:text-lg">
-            {t.experience.description}
-          </p>
-        </div>
+            title={t.experience.title}
+            description={t.experience.description}
+            inverse
+          />
 
-        <ul className="mx-auto mt-8 flex max-w-5xl flex-wrap items-center justify-center gap-2.5">
+        <ul className="mt-10 flex flex-wrap items-center justify-start gap-2.5 md:mt-12">
           {t.experience.sectors.map((sector, i) => {
             const Icon = sectorIcons[i % sectorIcons.length];
             return (
@@ -50,6 +47,7 @@ const ExperienceSection = () => {
             );
           })}
         </ul>
+        </div>
       </div>
     </section>
   );
