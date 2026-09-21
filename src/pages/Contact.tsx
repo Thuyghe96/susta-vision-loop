@@ -34,7 +34,6 @@ const Contact = () => {
     formPayload.append("company", formData.company);
     formPayload.append("email", formData.email);
     formPayload.append("phone", formData.phone);
-    formPayload.append("services", formData.services.join(", "));
     formPayload.append("message", formData.message);
 
     try {
