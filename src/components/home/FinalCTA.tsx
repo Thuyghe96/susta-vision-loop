@@ -1,31 +1,35 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const FinalCTA = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-gradient-to-b from-[hsl(var(--sand))] to-background py-24 md:py-32">
+    <section aria-labelledby="final-cta-heading" className="bg-primary py-20 text-primary-foreground md:py-28">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="eyebrow mb-4">{t.finalCta.eyebrow}</p>
-          <h2 className="font-display text-3xl leading-tight md:text-5xl text-balance">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mx-auto mb-4 block h-px w-6 bg-primary-foreground/60" aria-hidden="true" />
+          <h2
+            id="final-cta-heading"
+            className="font-display text-3xl leading-tight text-balance md:text-4xl"
+          >
             {t.finalCta.title}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground text-pretty">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/80 text-pretty">
             {t.finalCta.description}
           </p>
 
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <Button size="lg" asChild className="rounded-md">
-              <Link to="/contact">
-                {t.finalCta.cta}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+          <div className="mt-9 flex flex-col items-center gap-5">
+            <Button size="lg" variant="secondary" asChild className="rounded-md">
+              <Link to="/contact">{t.finalCta.cta}</Link>
             </Button>
-            <p className="text-sm text-muted-foreground">{t.finalCta.secondary}</p>
+            <a
+              href="mailto:thomas@sustavision.com"
+              className="text-sm text-primary-foreground/75 underline-offset-4 transition-colors hover:text-primary-foreground hover:underline"
+            >
+              {t.finalCta.secondary}
+            </a>
           </div>
         </div>
       </div>

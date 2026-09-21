@@ -75,7 +75,6 @@ export const translations = {
     whySustavision: {
       title: "A different kind of ESG support",
       description: "Sustavision is built for lean teams that need credible ESG support without consultant overhead or unnecessary complexity.",
-      processLine: "We start by understanding your situation, then focus on clear priorities and practical next steps.",
       points: [
         {
           heading: "Senior, founder-led support",
@@ -198,11 +197,10 @@ export const translations = {
       ],
     },
     finalCta: {
-      eyebrow: "Start a conversation",
-      title: "Not sure where to start? That is usually the right time to talk.",
-      description: "A 30-minute introductory call is enough to understand your situation, surface the real priority, and tell you honestly whether we are the right fit.",
-      cta: "Book an introductory call",
-      secondary: "Or email thomas@sustavision.com",
+      title: "Not sure where to begin?",
+      description: "In a 30-minute introductory call, we identify the real priority and whether Sustavision is the right fit. No obligation, no generic sales pitch - just a clear view of what makes sense for your business.",
+      cta: "Book a 30-minute introductory call",
+      secondary: "Or email Thomas at thomas@sustavision.com",
     },
     footer: {
       tagline: "Boutique ESG advisory for SMEs.",
@@ -322,7 +320,6 @@ export const translations = {
     whySustavision: {
       title: "ESG-ondersteuning van een andere orde",
       description: "Sustavision is gebouwd voor lean teams die geloofwaardige ESG-ondersteuning zoeken zonder consultantoverhead of onnodige complexiteit.",
-      processLine: "We beginnen met uw situatie te begrijpen en richten ons daarna op duidelijke prioriteiten en praktische vervolgstappen.",
       points: [
         {
           heading: "Senior, founder-led ondersteuning",
@@ -445,11 +442,10 @@ export const translations = {
       ],
     },
     finalCta: {
-      eyebrow: "Start een gesprek",
-      title: "Niet zeker waar te beginnen? Dat is meestal het juiste moment om te praten.",
-      description: "Een kennismaking van 30 minuten volstaat om uw situatie te begrijpen, de echte prioriteit boven te halen en u eerlijk te zeggen of wij de juiste fit zijn.",
-      cta: "Plan een kennismaking",
-      secondary: "Of mail thomas@sustavision.com",
+      title: "Niet zeker waar te beginnen?",
+      description: "In een kennismaking van 30 minuten bepalen we de echte prioriteit en of Sustavision de juiste fit is. Geen verplichtingen, geen generiek verkoopverhaal - gewoon een duidelijk beeld van wat zinvol is voor uw bedrijf.",
+      cta: "Plan een kennismaking van 30 minuten",
+      secondary: "Of mail Thomas op thomas@sustavision.com",
     },
     footer: {
       tagline: "Boutique ESG-advies voor KMO's.",

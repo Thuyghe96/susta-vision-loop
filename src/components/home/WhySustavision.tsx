@@ -5,7 +5,7 @@ const pointIcons = [UserRound, Users, Factory];
 
 const WhySustavision = () => {
   const { t } = useLanguage();
-  const { title, description, processLine, points } = t.whySustavision;
+  const { title, description, points } = t.whySustavision;
 
   return (
     <section
@@ -24,11 +24,14 @@ const WhySustavision = () => {
           <p className="mt-5 text-lg text-muted-foreground text-pretty">{description}</p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-10 md:mt-14 md:grid-cols-3 md:gap-8">
+        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-5 md:mt-14 md:grid-cols-3 md:gap-6">
           {points.map((point, index) => {
             const Icon = pointIcons[index];
             return (
-              <article key={point.heading} className="flex flex-col">
+              <article
+                key={point.heading}
+                className="flex flex-col rounded-md border border-hairline bg-background p-7 shadow-soft transition-shadow duration-300 hover:shadow-card md:p-8"
+              >
                 <Icon aria-hidden="true" className="h-6 w-6 text-primary" strokeWidth={1.5} />
                 <h3 className="mt-5 font-display text-xl leading-snug text-foreground md:text-2xl">
                   {point.heading}
@@ -40,10 +43,6 @@ const WhySustavision = () => {
             );
           })}
         </div>
-
-        <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground md:text-base">
-          {processLine}
-        </p>
       </div>
     </section>
   );
