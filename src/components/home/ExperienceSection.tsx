@@ -36,7 +36,7 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        <ul className="mx-auto mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-3">
+        <ul className="mx-auto mt-8 flex max-w-5xl flex-wrap items-center justify-center gap-2.5">
           {t.experience.sectors.map((sector, i) => {
             const Icon = sectorIcons[i % sectorIcons.length];
             return (
