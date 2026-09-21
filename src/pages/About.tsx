@@ -31,6 +31,7 @@ const About = () => {
                     <p>{t.about.bio1}</p>
                     <p>{t.about.bio2}</p>
                     <p>{t.about.bio3}</p>
+                    <p>{t.about.bio4}</p>
                   </div>
                   <Button size="lg" asChild className="mt-10 rounded-md">
                     <Link to="/contact">
