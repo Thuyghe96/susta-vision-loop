@@ -50,6 +50,28 @@ export const translations = {
         },
       ],
     },
+    serviceRoutes: {
+      title: "How we help you move forward",
+      description: "Whether you need to respond to a customer request, make sense of ESG expectations or build practical momentum, Sustavision helps you focus on what matters and take the next step with confidence.",
+      cta: "Explore our services",
+      cards: [
+        {
+          heading: "Get clear on what matters",
+          text: "Understand the ESG issues, requirements and priorities most relevant to your business.",
+          supporting: "Understand your ESG priorities and get a focused roadmap you can actually implement.",
+        },
+        {
+          heading: "Respond with confidence",
+          text: "Prepare credible responses to customer, platform and tender requirements.",
+          supporting: "Clear, well-structured answers for EcoVadis, CDP, customer and tender ESG requests.",
+        },
+        {
+          heading: "Turn plans into progress",
+          text: "Put practical carbon, supplier and ESG actions into place.",
+          supporting: "Measure your footprint, set priorities and take practical steps on carbon and suppliers.",
+        },
+      ],
+    },
     services: {
       eyebrow: "Service areas",
       title: "Five practical ways we work with SMEs.",
@@ -255,6 +277,28 @@ export const translations = {
           title: "Zet duurzaamheidsambities om in praktische actie",
           description: "Meet uw voetafdruk, bepaal realistische prioriteiten en zet duurzaamheidsambities om in vooruitgang. Ondersteuning kan bestaan uit CO2-voetafdrukken, Scope 1-3, leveranciersbetrokkenheid, reductieplannen en ondersteuning voor SBTi-afgestemde doelstellingen.",
           imageAlt: "Operationele professionals die duurzaamheidsdata bekijken in een moderne productieomgeving",
+        },
+      ],
+    },
+    serviceRoutes: {
+      title: "Hoe wij u vooruit helpen",
+      description: "Of u nu moet antwoorden op een klantvraag, ESG-verwachtingen wilt doorgronden of praktische vaart wilt opbouwen, Sustavision helpt u zich te richten op wat ertoe doet en met vertrouwen de volgende stap te zetten.",
+      cta: "Ontdek onze diensten",
+      cards: [
+        {
+          heading: "Helderheid over wat ertoe doet",
+          text: "Begrijp de ESG-thema's, vereisten en prioriteiten die het meest relevant zijn voor uw bedrijf.",
+          supporting: "Inzicht in uw ESG-prioriteiten en een gefocuste roadmap die u ook echt kunt uitvoeren.",
+        },
+        {
+          heading: "Antwoorden met vertrouwen",
+          text: "Bereid geloofwaardige antwoorden voor op vragen van klanten, platformen en aanbestedingen.",
+          supporting: "Duidelijke, goed gestructureerde antwoorden voor EcoVadis, CDP, klant- en aanbestedingsvragen rond ESG.",
+        },
+        {
+          heading: "Van plan naar vooruitgang",
+          text: "Zet praktische maatregelen rond carbon, leveranciers en ESG in de praktijk.",
+          supporting: "Meet uw voetafdruk, stel prioriteiten en zet concrete stappen rond carbon en leveranciers.",
         },
       ],
     },
