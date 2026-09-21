@@ -208,7 +208,7 @@ export const translations = {
       quickLinks: "Navigate",
       contact: "Contact",
       email: "thomas@sustavision.com",
-      phone: "+32 495 632 266",
+      phone: "+324 95 63 22 66",
       rights: "All rights reserved.",
     },
     about: {
@@ -524,7 +524,7 @@ export const translations = {
       quickLinks: "Navigatie",
       contact: "Contact",
       email: "thomas@sustavision.com",
-      phone: "+32 495 632 266",
+      phone: "+324 95 63 22 66",
       rights: "Alle rechten voorbehouden.",
     },
     about: {
