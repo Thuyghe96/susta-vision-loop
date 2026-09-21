@@ -1,43 +1,61 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ServiceAreas from "@/components/home/ServiceAreas";
 import ServiceLoop from "@/components/home/ServiceLoop";
-import FinalCTA from "@/components/home/FinalCTA";
+import ClimateServices from "@/components/home/ClimateServices";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Services = () => {
-  const { t } = useLanguage();
-
+  const { t, language } = useLanguage();
+  
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
       <main>
-        <section className="border-b border-hairline bg-gradient-soft py-24 md:py-36">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-b from-accent/50 to-background">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl">
-              <p className="eyebrow mb-6">{t.services.eyebrow}</p>
-              <h1 className="font-display text-4xl leading-[1.05] md:text-6xl text-balance">
-                {t.servicesPage.title}
-              </h1>
-              <p className="mt-8 max-w-2xl text-lg text-muted-foreground text-pretty">
-                {t.servicesPage.description}
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold">{t.services.title}</h1>
+              <p className="text-lg text-muted-foreground">
+                {t.services.description}
               </p>
-              <Button size="lg" asChild className="mt-10 rounded-md">
+              <Button size="lg" asChild>
                 <Link to="/contact">
-                  {t.servicesPage.cta}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  {language === "en" ? "Get started with a free consultation" : "Start met een gratis consult"}
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
           </div>
         </section>
 
-        <ServiceAreas />
         <ServiceLoop />
-        <FinalCTA />
+        <ClimateServices />
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center space-y-6 rounded-2xl border border-primary/20 bg-accent/50 p-12">
+              <h2 className="text-3xl font-bold">
+                {language === "en" ? "Ready to get started?" : "Klaar om te starten?"}
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {language === "en" 
+                  ? "Book your free ESG consultation and discover how we can help your business thrive sustainably." 
+                  : "Boek uw gratis ESG-consult en ontdek hoe wij uw bedrijf kunnen helpen duurzaam te groeien."}
+              </p>
+              <Button size="lg" asChild>
+                <Link to="/contact">
+                  {language === "en" ? "Book your free consultation" : "Boek uw gratis consult"}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

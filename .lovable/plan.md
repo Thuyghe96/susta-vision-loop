@@ -1,78 +1,20 @@
+# Redesign the “Where we support” section
 
-Apply the same three-tone editorial rhythm (off-white → sand → faint teal mist, with the dark ink as a strong anchor) across every page so navigation between sections feels intentional everywhere, not just on the homepage.
+## What will change
+- Replace the existing support-point treatment with one full-width banner containing three equal image panels.
+- Keep the supplied English heading, introduction, panel headlines, and supporting text exactly as provided.
+- Add equivalent Flemish/standard Dutch copy so the existing language switch remains complete.
+- Use three coordinated custom images: client requests, regulatory guidance, and practical operational action.
+- Show only panel headlines initially, then reveal details through calm hover/focus transitions on desktop and tap-to-expand behavior on touch devices.
+- Preserve strong contrast, descriptive image text, keyboard access, visible focus states, and reduced-motion support.
 
-## Pages in scope
+## Layout and interaction
+- Desktop: three adjacent panels in one row; the active panel expands slightly while all remain visible.
+- Mobile/tablet: stacked tappable panels; the active panel grows vertically to display its full text.
+- Use subtle light dividers and a forest-green image overlay, with no competing calls to action.
 
-- Home (already planned)
-- Services
-- About
-- Contact
-- NotFound (light touch)
-
-## New shared token
-
-In `src/index.css`, add:
-- `--surface-mist: 184 30% 96%` (light mode) - faint teal wash
-- Dark-mode equivalent: `184 30% 14%`
-
-Reusable across all pages. Bookend gradients keep using existing `--gradient-soft`.
-
-## Per-page rhythm
-
-**Home** (as previously planned)
-```text
-Hero              gradient-soft         (opening)
-TrustStrip        background            (quiet pause)
-TriggerSection    secondary/60 (sand)   (the problem)
-ServiceAreas      background            (what we do)
-ServiceLoop       surface-mist (teal)   (how we work)
-WhyChooseUs       secondary/50 (sand)   (why us)
-ExperienceSection foreground (dark)     (anchor)
-FinalCTA          gradient-soft reversed (closing)
-```
-
-**Services** (`src/pages/Services.tsx`)
-```text
-Hero header       gradient-soft         (opening - already is)
-ServiceAreas      background            (what we do)
-ServiceLoop       surface-mist (teal)   (how we work)
-FinalCTA          gradient-soft reversed (closing)
-```
-
-**About** (`src/pages/About.tsx`) - inspect first to map sections, then apply the same off-white → sand → mist pattern, ending with either the dark ink anchor (if a values/credentials block exists) or a soft gradient close. Likely rhythm:
-```text
-Hero/intro        gradient-soft
-Founder bio       background
-Approach/values   secondary/50 (sand)
-Sectors/credentials foreground (dark anchor) — if present
-Closing CTA       gradient-soft reversed
-```
-
-**Contact** (`src/pages/Contact.tsx`) - usually one or two blocks. Apply:
-```text
-Header            gradient-soft
-Form + info       background
-(optional FAQ)    secondary/50 (sand)
-```
-
-**NotFound** - keep simple: `bg-gradient-soft` so even the 404 feels on-brand.
-
-## Shared seam refinement
-
-Across all pages, soften section dividers from `border-border` to `border-hairline` so the color shift carries the rhythm rather than the line. Keep the dark-section borders as-is (they already use `border-background/15`).
-
-## Files to edit
-
-- `src/index.css` - add `--surface-mist` token (light + dark)
-- `src/components/home/Hero.tsx`
-- `src/components/home/TriggerSection.tsx`
-- `src/components/home/ServiceLoop.tsx`
-- `src/components/home/WhyChooseUs.tsx`
-- `src/components/home/FinalCTA.tsx`
-- `src/components/home/ExperienceSection.tsx` (border softening only)
-- `src/pages/Services.tsx` (header section bg + final CTA mirroring)
-- `src/pages/About.tsx` (section backgrounds - will read first to map exact sections)
-- `src/pages/Contact.tsx` (header + section backgrounds)
-- `src/pages/NotFound.tsx` (single bg swap)
-
-No layout, typography, copy, or component-structure changes - purely surface tones and seams. Boutique and quiet, but every page now has a clear chapter rhythm.
+## Technical details
+- Add the panel copy to the existing bilingual translation structure.
+- Build a focused homepage section component using existing design tokens and controls.
+- Add the section to the homepage in the current content flow.
+- Verify default, hover/focus, tap, English/Dutch, and responsive states in the live preview.
