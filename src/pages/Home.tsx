@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/home/Hero";
 import TrustBadges from "@/components/home/TrustBadges";
 import ServiceLoop from "@/components/home/ServiceLoop";
-import ClimateServices from "@/components/home/ClimateServices";
+import TriggerSection from "@/components/home/TriggerSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 const Home = () => {
@@ -13,8 +13,8 @@ const Home = () => {
       <main>
         <Hero />
         <TrustBadges />
+        <TriggerSection />
         <ServiceLoop />
-        <ClimateServices />
         <WhyChooseUs />
       </main>
       <Footer />

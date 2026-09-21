@@ -22,6 +22,29 @@ export const translations = {
       csrd: "CSRD & VSME reporting",
       ecovadis: "Expert in ESG certification frameworks (Ecovadis, CDP, etc.)",
     },
+    supportSection: {
+      title: "Where we support",
+      description: "Most clients reach out when ESG requirements, customer expectations or reporting deadlines start to feel urgent. We help them quickly.",
+      exploreLabel: "Explore",
+      closeLabel: "Close",
+      panels: [
+        {
+          title: "Customer, platform or tender requests",
+          description: "A customer, platform or tender asks for ESG information. Get clear, credible support for EcoVadis, CDP, supplier questionnaires, tender responses and sustainability-data requests - without creating unnecessary internal workload.",
+          imageAlt: "Two professionals reviewing supplier documents and a digital questionnaire",
+        },
+        {
+          title: "Regulatory and certification pressure",
+          description: "CSRD, VSME, sustainability labels and changing requirements can be difficult to navigate. Understand what applies to your business, what customers may expect, and where to focus first.",
+          imageAlt: "A sustainability advisor reviewing structured standards documents",
+        },
+        {
+          title: "Turn sustainability ambitions into practical action",
+          description: "Measure your footprint, set realistic priorities and turn sustainability ambitions into progress. Support can include carbon footprints, Scope 1-3, supplier engagement, reduction plans and SBTi-aligned target support.",
+          imageAlt: "Operations professionals reviewing sustainability data in a modern production facility",
+        },
+      ],
+    },
     // Service Loop
     serviceLoop: {
       title: "What We Offer — The 5-Step Loop",
@@ -172,6 +195,29 @@ export const translations = {
       founderLed: "Oprichter-geleid",
       csrd: "CSRD & VSME rapportering",
       ecovadis: "Expert in ESG-certificeringskaders (Ecovadis, CDP, etc.)",
+    },
+    supportSection: {
+      title: "Waar we ondersteunen",
+      description: "De meeste klanten nemen contact op wanneer ESG-vereisten, klantverwachtingen of rapporteringsdeadlines dringend beginnen te worden. Wij helpen hen snel verder.",
+      exploreLabel: "Ontdek",
+      closeLabel: "Sluiten",
+      panels: [
+        {
+          title: "Vragen van klanten, platformen of aanbestedingen",
+          description: "Een klant, platform of aanbesteding vraagt om ESG-informatie. Krijg duidelijke, geloofwaardige ondersteuning voor EcoVadis, CDP, leveranciersvragenlijsten, aanbestedingsantwoorden en vragen om duurzaamheidsdata - zonder onnodige interne werklast te creëren.",
+          imageAlt: "Twee professionals die leveranciersdocumenten en een digitale vragenlijst bekijken",
+        },
+        {
+          title: "Druk door regelgeving en certificering",
+          description: "CSRD, VSME, duurzaamheidslabels en veranderende vereisten kunnen moeilijk te doorgronden zijn. Begrijp wat voor uw bedrijf van toepassing is, wat klanten kunnen verwachten en waarop u zich eerst moet richten.",
+          imageAlt: "Een duurzaamheidsadviseur die gestructureerde normdocumenten doorneemt",
+        },
+        {
+          title: "Zet duurzaamheidsambities om in praktische actie",
+          description: "Meet uw voetafdruk, bepaal realistische prioriteiten en zet duurzaamheidsambities om in vooruitgang. Ondersteuning kan bestaan uit CO2-voetafdrukken, Scope 1-3, leveranciersbetrokkenheid, reductieplannen en ondersteuning voor SBTi-afgestemde doelstellingen.",
+          imageAlt: "Operationele professionals die duurzaamheidsdata bekijken in een moderne productieomgeving",
+        },
+      ],
     },
     // Service Loop
     serviceLoop: {
