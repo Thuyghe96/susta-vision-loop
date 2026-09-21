@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/home/Hero";
 import TrustStrip from "@/components/home/TrustStrip";
 import TriggerSection from "@/components/home/TriggerSection";
-import ServiceAreas from "@/components/home/ServiceAreas";
+import ServiceRoutes from "@/components/home/ServiceRoutes";
 import ServiceLoop from "@/components/home/ServiceLoop";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ExperienceSection from "@/components/home/ExperienceSection";
@@ -17,7 +17,7 @@ const Home = () => {
         <Hero />
         <TrustStrip />
         <TriggerSection />
-        <ServiceAreas />
+        <ServiceRoutes />
         <ServiceLoop />
         <WhyChooseUs />
         <ExperienceSection />
