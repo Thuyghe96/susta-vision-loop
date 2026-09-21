@@ -96,7 +96,7 @@ const Contact = () => {
                     <Phone className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                     <div>
                       <p className="eyebrow mb-1">{language === "en" ? "Phone" : "Telefoon"}</p>
-                      <p className="font-display text-lg text-foreground group-hover:text-primary">+32 495 632 266</p>
+                      <p className="font-display text-lg text-foreground group-hover:text-primary">+324 95 63 22 66</p>
                     </div>
                   </a>
                 </div>

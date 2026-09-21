@@ -49,7 +49,7 @@ const Footer = () => {
               <li>
                 <a href="tel:+32495632266" className="flex items-center gap-2 text-sm text-foreground/80 transition-colors hover:text-primary">
                   <Phone className="h-4 w-4" />
-                  +32 495 632 266
+                  +324 95 63 22 66
                 </a>
               </li>
             </ul>
